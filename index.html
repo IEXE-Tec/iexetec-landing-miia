@@ -73,44 +73,43 @@
                   <div class="css3-spinner-scaler"></div>
                 </div>
               </div>
-              <input
-                type="text"
-                class="required sm-form-control input-block-level"
-                id="quick-contact-form-name"
-                name="quick-contact-form-name"
-                value=""
-                placeholder="Tu Nombre"
-              />
-              <input
-                type="text"
-                class="required sm-form-control email input-block-level"
-                id="quick-contact-form-email"
-                name="quick-contact-form-email"
-                value=""
-                placeholder="Correo electrónico"
-              />
-              <input
-                type="tel"
-                id="tel"
-                name="telefono"
-                class="required sm-form-control phone input-block-level"
-                placeholder="Tu Teléfono*"
-                required="required"
-                data-validation-required-message="Porfavor Ingresa tu celular."
-              />
-              <input
-                type="text"
-                class="d-none"
-                id="quick-contact-form-botcheck"
-                name="quick-contact-form-botcheck"
-                value=""
-              />
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="required sm-form-control input-block-level"
+                  id="quick-contact-form-name"
+                  name="quick-contact-form-name"
+                  value=""
+                  placeholder="Tu Nombre"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="required sm-form-control email input-block-level"
+                  id="quick-contact-form-email"
+                  name="quick-contact-form-email"
+                  value=""
+                  placeholder="Correo electrónico"
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="tel"
+                  id="tel"
+                  name="telefono"
+                  class="required sm-form-control phone input-block-level"
+                  placeholder="Tu Teléfono*"
+                  required="required"
+                  data-validation-required-message="Porfavor Ingresa tu celular."
+                />
+              </div>
               <input type="hidden" name="prefix" value="quick-contact-form-" />
               <button
                 type="submit"
                 id="quick-contact-form-submit"
                 name="quick-contact-form-submit"
-                class="button button-small button-3d m-0"
+                class="button button-medium button-3d"
                 value="submit"
               >
                 Mandar tus datos
@@ -139,7 +138,7 @@
             <div class="col-12">
               <input
                 type="text"
-                class="required form-control not-dark"
+                class="required form-control form-control-lg not-dark"
                 id="quick-contact-form-name"
                 name="quick-contact-form-name"
                 value=""
@@ -149,7 +148,7 @@
             <div class="col-12">
               <input
                 type="text"
-                class="required form-control not-dark"
+                class="required form-control form-control-lg not-dark"
                 id="quick-contact-form-email"
                 name="quick-contact-form-email"
                 value=""
@@ -161,7 +160,7 @@
                 type="tel"
                 id="tel"
                 name="telefono"
-                class="required form-control not-dark phone"
+                class="required form-control form-control-lg not-dark phone"
                 placeholder="Tu Teléfono*"
                 required="required"
                 data-validation-required-message="Porfavor Ingresa tu celular."
@@ -188,7 +187,7 @@
     <div id="wrapper" class="clearfix">
       <!-- Header
 		============================================= -->
-      <header id="header" class="sticky">
+      <header id="header" class="page-section" data-mobile-sticky="true">
         <div id="header-wrap">
           <div class="container">
             <div class="header-row justify-content-between">
@@ -329,33 +328,43 @@
                     data-animate="fadeInUp"
                   >
                     <div class="input-group mx-auto">
-                      <input
-                        type="name"
-                        id="widget-subscribe-form-name"
-                        name="widget-subscribe-form-name"
-                        class="form-control form-control-lg required name"
-                        placeholder="Ingresa tu nombre"
-                        style="box-shadow: none; overflow: hidden"
-                      />
-                      <input
-                        type="email"
-                        id="widget-subscribe-form-email"
-                        name="widget-subscribe-form-email"
-                        class="form-control form-control-lg required email"
-                        placeholder="Ingresa tu correo"
-                        style="box-shadow: none; overflow: hidden"
-                      />
-                      <input
-                        type="tel"
-                        id="tel"
-                        name="telefono"
-                        class="form-control form-control-lg required phone"
-                        placeholder="Tu Teléfono*"
-                        required="required"
-                        data-validation-required-message="Porfavor Ingresa tu celular."
-                        style="box-shadow: none; overflow: hidden"
-                      />
-                      <div class="input-group-append">
+                      <div class="col">
+                        <div class="row">
+                          <div class="col-lg-4 mb-1 mb-lg-0">
+                            <input
+                              type="name"
+                              id="widget-subscribe-form-name"
+                              name="widget-subscribe-form-name"
+                              class="form-control form-control-lg required name"
+                              placeholder="Ingresa tu nombre"
+                              style="box-shadow: none; overflow: hidden"
+                            />
+                          </div>
+                          <div class="col-lg-4 mb-1 mb-lg-0">
+                            <input
+                              type="email"
+                              id="widget-subscribe-form-email"
+                              name="widget-subscribe-form-email"
+                              class="form-control form-control-lg required email"
+                              placeholder="Ingresa tu correo"
+                              style="box-shadow: none; overflow: hidden"
+                            />
+                          </div>
+                          <div class="col-lg-4 mb-1 mb-lg-0">
+                            <input
+                              type="tel"
+                              id="tel"
+                              name="telefono"
+                              class="form-control form-control-lg required phone"
+                              placeholder="Tu Teléfono*"
+                              required="required"
+                              data-validation-required-message="Porfavor Ingresa tu celular."
+                              style="box-shadow: none; overflow: hidden"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mb-1 mb-lg-0 input-group-append">
                         <button
                           href="#"
                           class="btn btn-danger button-large font-weight-normal"
