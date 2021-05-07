@@ -11,6 +11,30 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700"
       rel="stylesheet"
     />
+    <!--FAVICONS PARA LOS ÍCONOS
+    =============================================
+    -->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://static.iexetec.com/mba/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://static.iexetec.com/mba/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://static.iexetec.com/mba/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="https://static.iexetec.com/mba/favicons/manifest.json"
+    />
 
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
@@ -63,10 +87,9 @@
             <p class="statusMsg"></p>
             <form
               id="requestACall"
-              name="quick-contact-form"
-              action="include/form.php"
+              name="requestAcall"
               method="post"
-              class="quick-contact-form mb-0"
+              class="mb-0"
               data-alert-type="inline"
             >
               <div class="form-process">
@@ -77,21 +100,23 @@
               <div class="col-12">
                 <input
                   type="text"
-                  class="required sm-form-control input-block-level"
+                  class="required sm-form-control name"
                   id="nombre"
                   name="nombre"
                   value=""
                   placeholder="Tu Nombre"
+                  data-validation-required-message="Porfavor Ingresa tu nombre."
                 />
               </div>
               <div class="col-12">
                 <input
                   type="text"
-                  class="required sm-form-control email input-block-level"
+                  class="required sm-form-control email"
                   id="correo"
                   name="correo"
                   value=""
                   placeholder="Correo electrónico"
+                  data-validation-required-message="Porfavor Ingresa tu correo."
                 />
               </div>
               <div class="col-12">
@@ -99,17 +124,15 @@
                   type="tel"
                   id="tel"
                   name="telefono"
-                  class="required sm-form-control phone input-block-level"
+                  class="required sm-form-control phone"
                   placeholder="Tu Teléfono*"
-                  required="required"
                   data-validation-required-message="Porfavor Ingresa tu celular."
                 />
               </div>
-              <input type="hidden" name="prefix" value="quick-contact-form-" />
               <button
                 type="submit"
-                id="quick-contact-form-submit"
-                name="quick-contact-form-submit"
+                id="submit"
+                name="submit"
                 class="button button-medium button-3d"
                 value="submit"
               >
@@ -317,8 +340,7 @@
                   <p
                     class="titular-sub-title text-primary font-weight-bold left mb-5"
                   >
-                    ¡Tu plataforma de lanzamiento para construir el próximo
-                    producto revolucionario!
+                    ¡Aprende a comprender y utilizar las principales herramientas y técnicas de actualidad en Inteligencia Artificial, para la solución de problemas y mejor toma de decisiones!
                   </p>
                 </div>
                 <div
@@ -829,21 +851,21 @@
               >
                 <ul class="tab-nav clearfix">
                   <li>
-                    <a href="#tabs-1"
-                      ><i class="icon-line-database"></i>Fundamentos de
-                      Inteligencia Artificial</a
+                    <a href="#tabs-1" class="story-title"
+                      ><i class="icon-line-database"></i><h3>Fundamentos de
+                      Inteligencia Artificial</h3></a
                     >
                   </li>
                   <li>
-                    <a href="#tabs-2"
-                      ><i class="icon-line-archive"></i>Conocimientos Avanzados
-                      de Inteligencia Artificial</a
+                    <a href="#tabs-2" class="story-title"
+                      ><i class="icon-line-archive"></i><h3>Conocimientos Avanzados
+                      de Inteligencia Artificial</h3></a
                     >
                   </li>
                   <li>
-                    <a href="#tabs-3"
-                      ><i class="icon-line-box"></i>Aplicaciones de Inteligencia
-                      Artificial</a
+                    <a href="#tabs-3" class="story-title"
+                      ><i class="icon-line-box"></i><h3>Aplicaciones de Inteligencia
+                      Artificial</h3></a
                     >
                   </li>
                 </ul>
@@ -1012,18 +1034,28 @@
                   <a href="#" data-filter="*">Mostrar todo</a>
                 </li>
                 <li>
-                  <a href="#" data-filter=".FIA"
-                    >Fundamentos de Inteligencia Artificial</a
+                  <a href="#" data-filter=".T1"
+                    >1° Trimestre</a
                   >
                 </li>
                 <li>
-                  <a href="#" data-filter=".CAIA"
-                    >Conocimientos Avanzados de Inteligencia Artificial</a
+                  <a href="#" data-filter=".T2"
+                    >2° Trimestre</a
                   >
                 </li>
                 <li>
-                  <a href="#" data-filter=".AIA"
-                    >Aplicaciones de Inteligencia Artificial</a
+                  <a href="#" data-filter=".T3"
+                    >3° Trimestre</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-filter=".T4"
+                    >4° Trimestre</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-filter=".T5"
+                    >5° Trimestre</a
                   >
                 </li>
               </ul>
@@ -1042,7 +1074,7 @@
               data-layout="fitRows"
             >
               <div
-                class="grid-item portfolio-item FIA col-12 col-sm-6 col-md-4 col-lg-3"
+                class="grid-item portfolio-item T1 col-12 col-sm-6 col-md-4 col-lg-3"
                 data-size="1280x853"
               >
                 <a
@@ -1080,7 +1112,7 @@
                 </a>
               </div>
               <div
-                class="grid-item portfolio-item FIA col-12 col-sm-6 col-md-4 col-lg-3"
+                class="grid-item portfolio-item T1 col-12 col-sm-6 col-md-4 col-lg-3"
                 data-size="1280x853"
               >
                 <a
@@ -1119,7 +1151,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 FIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T1"
                 data-size="1280x853"
               >
                 <a
@@ -1157,7 +1189,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
                 data-size="1280x853"
               >
                 <a
@@ -1192,7 +1224,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
                 data-size="1280x853"
               >
                 <a
@@ -1234,7 +1266,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
                 data-size="1280x853"
               >
                 <a
@@ -1272,7 +1304,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
                 data-size="1280x853"
               >
                 <a
@@ -1312,7 +1344,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
                 data-size="1280x853"
               >
                 <a
@@ -1353,7 +1385,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
                 data-size="1280x853"
               >
                 <a
@@ -1394,7 +1426,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
                 data-size="1280x853"
               >
                 <a
@@ -1431,7 +1463,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
                 data-size="1280x853"
               >
                 <a
@@ -1472,7 +1504,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
                 data-size="1280x853"
               >
                 <a
@@ -1510,7 +1542,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
                 data-size="1280x853"
               >
                 <a
@@ -1547,7 +1579,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
                 data-size="1280x853"
               >
                 <a
@@ -1588,7 +1620,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
                 data-size="1280x853"
               >
                 <a
@@ -2232,7 +2264,7 @@
                       no-repeat center center / cover;
                   "
                 >
-                  <a href="#">
+                  <a href="https://mcda.iexe.edu.mx/">
                     <div class="card-body">
                       <h6
                         class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
@@ -2254,7 +2286,7 @@
                       no-repeat center center / cover;
                   "
                 >
-                  <a href="#">
+                  <a href="https://mbatec.iexe.edu.mx/">
                     <div class="card-body">
                       <h6
                         class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
@@ -2276,7 +2308,7 @@
                       no-repeat center center / cover;
                   "
                 >
-                  <a href="#">
+                  <a href="https://mti.iexe.edu.mx/index.html">
                     <div class="card-body">
                       <h6
                         class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
@@ -2332,19 +2364,19 @@
                   <div class="col-lg-4 col-6">
                     <ul class="widget_links widget-li-noicon">
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Inicio</a>
+                        <a href="index.html">Inicio</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">¿Qué ofrecemos?</a>
+                        <a href="#" data-href="#habilidades">Habilidades</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Proyectos</a>
+                        <a href="#" data-href="#que-ofrecemos">¿Qué ofrecemos?</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Plan de estudios</a>
+                        <a href="#" data-href="#plan-estudios">áreas de Especialidad</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Desglose de Materias</a>
+                        <a href="#" data-href="#plan-estudios">Plan de estudios</a>
                       </li>
                     </ul>
                   </div>
@@ -2352,10 +2384,10 @@
                   <div class="col-lg-4 col-6">
                     <ul class="widget_links widget-li-noicon">
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Q & A</a>
+                        <a href="#" data-href="#q-a">Q & A</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Otros Programas</a>
+                        <a href="#" data-href="#otros-programas">Otros Programas</a>
                       </li>
                     </ul>
                   </div>
@@ -2410,7 +2442,7 @@
                 data-dismiss="alert"
                 aria-hidden="true"
               >
-                &times;
+                <i class="icon-line-cross icon-lg"></i>
               </button>
             </div>
           </div>
@@ -2627,7 +2659,7 @@
           data: request_data,
           beforeSend: function () {
             // Acciones antes de lanzar la solicitud
-            $('.submitBtn').attr('disabled', 'disabled');
+            $('#submit').attr('disabled', 'disabled');
             $('.modal-body').css('opacity', '.5');
           },
           success: function (data) {
@@ -2637,14 +2669,14 @@
               $('#inputEmail').val('');
               $('#tel').val('');
               $('.statusMsg').html(
-                '<span style="color:green;">¡Gracias por enviar tus datos!</span>'
+                '<span style="color:#17938F;font-weight: 700;font-size: 18px;">¡Gracias por enviar tus datos!</span>',
               );
             } else {
               $('.statusMsg').html(
-                '<span style="color:red;">Hubo un problema, porfavor intenta de nuevo</span>'
+                '<span style="color:#DB1F2D;font-weight: 700;font-size: 18px;">Hubo un problema, porfavor intenta de nuevo</span>',
               );
             }
-            $('.submitBtn').removeAttr('disabled');
+            $('#submit').removeAttr('disabled');
             $('.modal-body').css('opacity', '');
           }
         });

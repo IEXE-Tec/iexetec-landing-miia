@@ -14648,7 +14648,7 @@ label.label-muted {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
 }
 
-label.error {
+/* label.error {
   margin-top: 5px;
   color: #e42c3e;
   font-weight: 400;
@@ -14669,7 +14669,7 @@ input[type='checkbox']:not(:checked) + label.error {
 .form-control.error,
 .sm-form-control.error {
   border-color: #e42c3e;
-}
+} */
 
 /* ----------------------------------------------------------------
 	Google Maps
