@@ -62,7 +62,7 @@
 
     <!-- Document Title
 	============================================= -->
-    <title>MIAA, Máster en Inteligencia Artificial Aplicada | IEXE Tec</title>
+  <title>MIAA, Máster en Inteligencia Artificial Aplicada</title>
   </head>
 
   <body class="stretched">
@@ -82,7 +82,7 @@
           </p>
 
           <div
-            class="hidden-xs hidden-sm widget quick-contact-widget form-widget border-0 pt-0 clearfix"
+            class="hidden-xs hidden-sm widget quick-contact-widget border-0 pt-0 clearfix"
           >
             <p class="statusMsg"></p>
             <form
@@ -92,6 +92,7 @@
               class="mb-0"
               data-alert-type="inline"
             >
+            <input name="programa" type="hidden" value="MIAA">
               <div class="form-process">
                 <div class="css3-spinner">
                   <div class="css3-spinner-scaler"></div>
@@ -157,10 +158,10 @@
             id="requestBCall"
             name="login-form"
             class="mb-0 row"
-            action="#"
             method="post"
             data-alert-type="inline"
           >
+          <input name="programa" type="hidden" value="MIAA">
             <div class="col-12">
               <input
                 type="text"
@@ -344,7 +345,7 @@
                   </p>
                 </div>
                 <div
-                  class="widget form-widget subscribe-widget"
+                  class="widget subscribe-widget"
                   data-loader="button"
                 >
                   <p
@@ -352,12 +353,12 @@
                   ></p>
                   <form
                     id="requestCCall"
-                    action="include/subscribe.php"
                     method="post"
                     class="mb-0"
                     data-animate="fadeInUp"
                     data-alert-type="inline"
                   >
+                  <input name="programa" type="hidden" value="MIAA">
                     <div class="input-group mx-auto">
                       <div class="col">
                         <div class="row">
@@ -644,7 +645,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                <!--<div class="col-lg-4 col-md-6 d-flex align-self-stretch">
                   <div
                     class="feature-box flex-column h-shadow mx-0"
                     style="
@@ -669,9 +670,9 @@
                       </p>
                     </div>
                   </div>
-                </div>
+                </div>-->
 
-                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
                   <div
                     class="feature-box flex-column h-shadow mx-0"
                     style="
@@ -697,7 +698,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
                   <div
                     class="feature-box flex-column h-shadow mx-0"
                     style="
@@ -2640,15 +2641,13 @@
 
       function submit_form(form) {
         // Aquí puedes meter validaciones de campos
-        var especialidad = especialidad;
         var countryData = iti.getSelectedCountryData();
         var pais = countryData['iso2'];
         var extra_params =
           '&adicional=pais:%20' +
           pais +
           '&programa=MIAA%20-%20Inteligencia%20la%20Artificial' +
-          '&especialidad=especialidad%20' +
-          '&referencia=https://miia.iexe.edu.mx/' +
+          '&referencia=https://miaa.iexe.edu.mx/' +
           '&charifaz=' +
           get_browser();
         var request_data = form.serialize() + extra_params;
@@ -2676,7 +2675,7 @@
                 '<span style="color:#DB1F2D;font-weight: 700;font-size: 18px;">Hubo un problema, porfavor intenta de nuevo</span>',
               );
             }
-            $('#submit').removeAttr('disabled');
+            $('.submit').removeAttr('disabled');
             $('.modal-body').css('opacity', '');
           }
         });
