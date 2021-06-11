@@ -11,6 +11,30 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700"
       rel="stylesheet"
     />
+    <!--FAVICONS PARA LOS ÍCONOS
+    =============================================
+    -->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://static.iexetec.com/mba/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://static.iexetec.com/mba/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://static.iexetec.com/mba/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="https://static.iexetec.com/mba/favicons/manifest.json"
+    />
 
     <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
@@ -38,7 +62,7 @@
 
     <!-- Document Title
 	============================================= -->
-    <title>MIAA, Máster en Inteligencia Artificial Aplicada | IEXE Tec</title>
+  <title>MIAA, Máster en Inteligencia Artificial Aplicada</title>
   </head>
 
   <body class="stretched">
@@ -58,16 +82,17 @@
           </p>
 
           <div
-            class="hidden-xs hidden-sm widget quick-contact-widget form-widget border-0 pt-0 clearfix"
+            class="hidden-xs hidden-sm widget quick-contact-widget border-0 pt-0 clearfix"
           >
-            <div class="form-result"></div>
+            <p class="statusMsg"></p>
             <form
               id="requestACall"
-              name="quick-contact-form"
-              action="include/form.php"
+              name="requestAcall"
               method="post"
-              class="quick-contact-form mb-0"
+              class="mb-0"
+              data-alert-type="inline"
             >
+            <input name="programa" type="hidden" value="MIAA">
               <div class="form-process">
                 <div class="css3-spinner">
                   <div class="css3-spinner-scaler"></div>
@@ -76,21 +101,23 @@
               <div class="col-12">
                 <input
                   type="text"
-                  class="required sm-form-control input-block-level"
-                  id="quick-contact-form-name"
-                  name="quick-contact-form-name"
+                  class="required sm-form-control name"
+                  id="nombre"
+                  name="nombre"
                   value=""
                   placeholder="Tu Nombre"
+                  data-validation-required-message="Porfavor Ingresa tu nombre."
                 />
               </div>
               <div class="col-12">
                 <input
                   type="text"
-                  class="required sm-form-control email input-block-level"
-                  id="quick-contact-form-email"
-                  name="quick-contact-form-email"
+                  class="required sm-form-control email"
+                  id="correo"
+                  name="correo"
                   value=""
                   placeholder="Correo electrónico"
+                  data-validation-required-message="Porfavor Ingresa tu correo."
                 />
               </div>
               <div class="col-12">
@@ -98,17 +125,15 @@
                   type="tel"
                   id="tel"
                   name="telefono"
-                  class="required sm-form-control phone input-block-level"
+                  class="required sm-form-control phone"
                   placeholder="Tu Teléfono*"
-                  required="required"
                   data-validation-required-message="Porfavor Ingresa tu celular."
                 />
               </div>
-              <input type="hidden" name="prefix" value="quick-contact-form-" />
               <button
                 type="submit"
-                id="quick-contact-form-submit"
-                name="quick-contact-form-submit"
+                id="submit"
+                name="submit"
                 class="button button-medium button-3d"
                 value="submit"
               >
@@ -128,19 +153,21 @@
           </h3>
         </div>
         <div class="card-body mx-auto p-5">
+          <p class="statusMsg"></p>
           <form
             id="requestBCall"
             name="login-form"
             class="mb-0 row"
-            action="#"
             method="post"
+            data-alert-type="inline"
           >
+          <input name="programa" type="hidden" value="MIAA">
             <div class="col-12">
               <input
                 type="text"
                 class="required form-control form-control-lg not-dark"
-                id="quick-contact-form-name"
-                name="quick-contact-form-name"
+                id="nombre"
+                name="nombre"
                 value=""
                 placeholder="Tu Nombre"
               />
@@ -149,8 +176,8 @@
               <input
                 type="text"
                 class="required form-control form-control-lg not-dark"
-                id="quick-contact-form-email"
-                name="quick-contact-form-email"
+                id="correo"
+                name="correo"
                 value=""
                 placeholder="Correo electrónico"
               />
@@ -255,6 +282,11 @@
                     >
                   </li>
                   <li class="menu-item">
+                    <a class="menu-link" href="#" data-href="#habilidades"
+                      ><div>Habilidades</div></a
+                    >
+                  </li>
+                  <li class="menu-item">
                     <a class="menu-link" href="#" data-href="#que-ofrecemos"
                       ><div>¿Qué ofrecemos?</div></a
                     >
@@ -309,32 +341,32 @@
                   <p
                     class="titular-sub-title text-primary font-weight-bold left mb-5"
                   >
-                    ¡Tu plataforma de lanzamiento para construir el próximo
-                    producto revolucionario!
+                    ¡Aprende a comprender y utilizar las principales herramientas y técnicas de actualidad en Inteligencia Artificial, para la solución de problemas y mejor toma de decisiones!
                   </p>
                 </div>
                 <div
-                  class="widget form-widget subscribe-widget"
+                  class="widget subscribe-widget"
                   data-loader="button"
                 >
-                  <div
-                    class="widget form-widget widget-subscribe-form-result"
-                  ></div>
+                  <p
+                    class="statusMsg"
+                  ></p>
                   <form
                     id="requestCCall"
-                    action="include/subscribe.php"
                     method="post"
                     class="mb-0"
                     data-animate="fadeInUp"
+                    data-alert-type="inline"
                   >
+                  <input name="programa" type="hidden" value="MIAA">
                     <div class="input-group mx-auto">
                       <div class="col">
                         <div class="row">
                           <div class="col-lg-4 mb-1 mb-lg-0">
                             <input
                               type="name"
-                              id="widget-subscribe-form-name"
-                              name="widget-subscribe-form-name"
+                              id="nombre"
+                              name="nombre"
                               class="form-control form-control-lg required name"
                               placeholder="Ingresa tu nombre"
                               style="box-shadow: none; overflow: hidden"
@@ -343,8 +375,8 @@
                           <div class="col-lg-4 mb-1 mb-lg-0">
                             <input
                               type="email"
-                              id="widget-subscribe-form-email"
-                              name="widget-subscribe-form-email"
+                              id="correo"
+                              name="correo"
                               class="form-control form-control-lg required email"
                               placeholder="Ingresa tu correo"
                               style="box-shadow: none; overflow: hidden"
@@ -412,15 +444,14 @@
               </div>
             </div>
           </div>
-          <div class="section">
-            <div class="container">
+            <div class="container mt-4" id="habilidades">
             <div class="container text-center">
               <div class="heading-block center">
                 <h3 class="color ls0">¿Qué habilidades aprenderás?</h3>
               </div>
 
               <p>
-                Crear profesionales altamente capaces en el ámbito de la
+                Queremos que el alumno sea capaz en el ámbito de la
                   inteligencia artificial mediante la implementación de
                   soluciones basadas en el análisis de datos, aprendizaje de
                   máquina aplicados a escenarios de gran demanda en la
@@ -434,79 +465,58 @@
             </div>
 
               <div class="row col-mb-50">
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <div class="feature-box fbox-plain">
                     <div class="fbox-icon">
                       <a href="#"><i class="i-alt">1.</i></a>
                     </div>
                     <div class="fbox-content">
-                      <h3>Habilidades de programación</h3>
+                      <h3>Visión Computacional</h3>
                       <p>
                         <ul>
-                          <li>Programación Estructurada</li>
-                          <li>Programación Orientada a Objetos</li>
-                          <li>Análisis y manejo de estructuras de datos</li>
+                          <li>Detección de objetos en imágenes</li>
+                          <li>Aplicar filtros en fotografías</li>
+                          <li>Lector de códigos de barras</li>
+                          <li>Reconocimiento facial</li>
+                          <li>Reconocimiento de caracteres (OCR)</li>
+                          <li>Proyectos de realidad aumentada</li>
                         </ul>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <div class="feature-box fbox-plain">
                     <div class="fbox-icon">
                       <a href="#"><i class="i-alt">2.</i></a>
                     </div>
                     <div class="fbox-content">
-                      <h3>Habilidades de análisis de Datos</h3>
+                      <h3>Sistemas de Recomendación</h3>
                       <p>
                         <ul>
-                          <li>Análisis y diseño de bases de datos relacionales</li>
-                          <li>Lenguaje de consulta estructurado SQL</li>
-                          <li>Herramientas para procesamiento masivo de datos (Hadoop, Spark)</li>
-                          <li>Herramientas de software para análisis y visualización de datos</li>
-                          <li>Herramientas de software para crear modelos de aprendizaje de máquina</li>
-                          <li>Herramientas de software para aprendizaje profundo</li>
+                          <li>Sistemas de recomendación basados en productos (Netflix, Amazon, Yelp)</li>
+                          <li>Sistemas de recomendación basados en personas (Redes sociales, sitios de citas)</li>
+                          <li>Buscadores aumentados (autocompletar términos de búsqueda)</li>
                         </ul>
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="row col-mb-50">
-
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <div class="feature-box fbox-plain">
                     <div class="fbox-icon">
                       <a href="#"><i class="i-alt">3.</i></a>
                     </div>
                     <div class="fbox-content">
-                      <h3>Habilidades analíticas</h3>
+                      <h3>Procesamiento de lenguaje corporal</h3>
                       <p>
                         <ul>
-                          <li>Fundamentos de probabilidad, estadística y álgebra lineal</li>
-                          <li>Conocimiento de los algoritmos y técnicas de aprendizaje de máquina</li>
-                          <li>Conocimiento de los algoritmos y técnicas de inteligencia artificial</li>
-                        </ul>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="feature-box fbox-plain">
-                    <div class="fbox-icon">
-                      <a href="#"><i class="i-alt">4.</i></a>
-                    </div>
-                    <div class="fbox-content">
-                      <h3>Herramientas y tecnologías</h3>
-                      <p>
-                        <ul>
-                          <li>Manejo de infraestructura en la nube</li>
-                          <li>Desarrollo basado en microservicios (Docker, Kubernetes)</li>
-                          <li>Herramientas de análisis de datos (Jupyter, Google Colab)</li>
-                          <li>Herramientas para crear flujos de procesamiento de datos</li>
-                          <li>Marcos de trabajo para crear aplicaciones y servicios web</li>
-                          <li>Sistemas de Control de Versiones (git, github)</li>
+                          <li>Entrenamiento de Chatbots</li>
+                          <li>Análisis de Sentimientos en texto</li>
+                          <li>Detección de SPAM</li>
+                          <li>Detección de noticias falsas</li>
+                          <li>Extracción de palabras clave</li>
                         </ul>
                       </p>
                     </div>
@@ -514,7 +524,6 @@
                 </div>
               </div>
             </div>
-          </div>
 
           <div
             class="section dark bg-color"
@@ -553,7 +562,7 @@
                   <div
                     class="feature-box flex-column h-shadow mx-0"
                     style="
-                      background-image: linear-gradient(#2646532b, #264653f7),
+                      background-image: linear-gradient(#00446927, #00486570),
                         url('images/services/6.jpg');
                     "
                   >
@@ -636,7 +645,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                <!--<div class="col-lg-4 col-md-6 d-flex align-self-stretch">
                   <div
                     class="feature-box flex-column h-shadow mx-0"
                     style="
@@ -661,9 +670,9 @@
                       </p>
                     </div>
                   </div>
-                </div>
+                </div>-->
 
-                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
                   <div
                     class="feature-box flex-column h-shadow mx-0"
                     style="
@@ -689,7 +698,7 @@
                   </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
                   <div
                     class="feature-box flex-column h-shadow mx-0"
                     style="
@@ -843,21 +852,21 @@
               >
                 <ul class="tab-nav clearfix">
                   <li>
-                    <a href="#tabs-1"
-                      ><i class="icon-line-database"></i>Fundamentos de
-                      Inteligencia Artificial</a
+                    <a href="#tabs-1" class="story-title"
+                      ><i class="icon-line-database"></i><h3>Fundamentos de
+                      Inteligencia Artificial</h3></a
                     >
                   </li>
                   <li>
-                    <a href="#tabs-2"
-                      ><i class="icon-line-archive"></i>Conocimientos Avanzados
-                      de Inteligencia Artificial</a
+                    <a href="#tabs-2" class="story-title"
+                      ><i class="icon-line-archive"></i><h3>Conocimientos Avanzados
+                      de Inteligencia Artificial</h3></a
                     >
                   </li>
                   <li>
-                    <a href="#tabs-3"
-                      ><i class="icon-line-box"></i>Aplicaciones de Inteligencia
-                      Artificial</a
+                    <a href="#tabs-3" class="story-title"
+                      ><i class="icon-line-box"></i><h3>Aplicaciones de Inteligencia
+                      Artificial</h3></a
                     >
                   </li>
                 </ul>
@@ -1026,18 +1035,28 @@
                   <a href="#" data-filter="*">Mostrar todo</a>
                 </li>
                 <li>
-                  <a href="#" data-filter=".FIA"
-                    >Fundamentos de Inteligencia Artificial</a
+                  <a href="#" data-filter=".T1"
+                    >1° Trimestre</a
                   >
                 </li>
                 <li>
-                  <a href="#" data-filter=".CAIA"
-                    >Conocimientos Avanzados de Inteligencia Artificial</a
+                  <a href="#" data-filter=".T2"
+                    >2° Trimestre</a
                   >
                 </li>
                 <li>
-                  <a href="#" data-filter=".AIA"
-                    >Aplicaciones de Inteligencia Artificial</a
+                  <a href="#" data-filter=".T3"
+                    >3° Trimestre</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-filter=".T4"
+                    >4° Trimestre</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-filter=".T5"
+                    >5° Trimestre</a
                   >
                 </li>
               </ul>
@@ -1056,7 +1075,7 @@
               data-layout="fitRows"
             >
               <div
-                class="grid-item portfolio-item FIA col-12 col-sm-6 col-md-4 col-lg-3"
+                class="grid-item portfolio-item T1 col-12 col-sm-6 col-md-4 col-lg-3"
                 data-size="1280x853"
               >
                 <a
@@ -1094,7 +1113,7 @@
                 </a>
               </div>
               <div
-                class="grid-item portfolio-item FIA col-12 col-sm-6 col-md-4 col-lg-3"
+                class="grid-item portfolio-item T1 col-12 col-sm-6 col-md-4 col-lg-3"
                 data-size="1280x853"
               >
                 <a
@@ -1133,7 +1152,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 FIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T1"
                 data-size="1280x853"
               >
                 <a
@@ -1171,7 +1190,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
                 data-size="1280x853"
               >
                 <a
@@ -1206,7 +1225,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
                 data-size="1280x853"
               >
                 <a
@@ -1248,7 +1267,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
                 data-size="1280x853"
               >
                 <a
@@ -1286,7 +1305,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
                 data-size="1280x853"
               >
                 <a
@@ -1326,7 +1345,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
                 data-size="1280x853"
               >
                 <a
@@ -1367,7 +1386,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 CAIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
                 data-size="1280x853"
               >
                 <a
@@ -1408,7 +1427,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
                 data-size="1280x853"
               >
                 <a
@@ -1445,7 +1464,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
                 data-size="1280x853"
               >
                 <a
@@ -1486,7 +1505,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
                 data-size="1280x853"
               >
                 <a
@@ -1524,7 +1543,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
                 data-size="1280x853"
               >
                 <a
@@ -1561,7 +1580,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
                 data-size="1280x853"
               >
                 <a
@@ -1602,7 +1621,7 @@
                 </a>
               </div>
               <div
-                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 AIA"
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
                 data-size="1280x853"
               >
                 <a
@@ -2012,13 +2031,28 @@
                   <i class="icon-angle-right"></i>
                 </button>
               </div>
-              <div class="owl-dots">
+              <!--<div class="owl-dots">
                 <button role="button" class="owl-dot active">
                   <span></span></button
                 ><button role="button" class="owl-dot"><span></span></button>
-              </div>
+              </div>-->
             </div>
           </div>
+
+          <div class="clear"></div>
+
+          <div class="container mt-4">
+
+					<h3 class="center">LAS EMPRESAS EN LAS QUE HAN TRABAJADO</h3>
+
+					<div id="oc-clients-full" class="owl-carousel owl-carousel-full image-carousel carousel-widget owl-loaded owl-drag" data-margin="30" data-nav="true" data-pagi="false" data-autoplay="5000" data-items-xs="3" data-items-sm="3" data-items-md="5" data-items-lg="6" data-items-xl="7">
+					<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1106px, 0px, 0px); transition: all 0.25s ease 0s; width: 2656px;"><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/amazon.png" alt="Brands"></a></div></div><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/bitso-logo.png" alt="Brands"></a></div></div><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/iexe-logo.png" alt="Brands"></a></div></div><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/konfio.png" alt="Brands"></a></div></div><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/zubale.png" alt="Brands"></a></div></div><div class="owl-item active" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/prudential.png" alt="Brands"></a></div></div><div class="owl-item active" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/gonzales-calvillo.png" alt="Brands"></a></div></div>
+          <div class="owl-item active" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/google.png" alt="Brands"></a></div></div>
+        </div>
+        </div>
+        <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+          </div>
+				</div>
 
           <div class="clear"></div>
 
@@ -2049,8 +2083,7 @@
                     <h2>SHOWCASE PROYECTOS REALES</h2>
                     <p>
                       Presenta tus proyectos realizados en clases al
-                      mundo.Conecta directo con nuestros mentores, expertos y
-                      protagonistas y obtén mentorías personalizadas.
+                      mundo.
                     </p>
                   </div>
                 </div>
@@ -2067,9 +2100,8 @@
                   <div class="fbox-content center text-center px-0">
                     <h2>SHOWCASE DE ALUMNOS</h2>
                     <p>
-                      El alumno debe demostrar el dominio del material del curso
-                      completando proyectos grupales mensuales y creando
-                      productos reales propuestos por empresas del sector.
+                      Conecta directo con nuestros mentores, expertos y
+                      protagonistas y obtén mentorías personalizadas.
                     </p>
                   </div>
                 </div>
@@ -2125,17 +2157,21 @@
                       </div>
                     </div>
                     <div class="toggle-content pl-4">
-                      1. El Máster completa dura 15 meses, divididos en 5
+                      1. El Máster completo dura 15 meses, divididos en 5
                       trimestres más un mes adicional el primer trimestre para
                       propedéuticos. El último mes esta enfocado en tu proyecto
                       de titulación ya que todos nuestros programas cuentan con
-                      revalidación oficial de la SEP. 2. El programa es
+                      revalidación oficial de la SEP. 
+                      <br>
+                      2. El programa es
                       flexible, es decir puedes avanzar a tu propio ritmo pero
                       si tenemos una estructura y orden por lo que se programan
                       3 materias cada trimestre, es decir 1 materia al mes en
                       promedio. Hay alumnos que terminan una materia en 1 semana
-                      y hay unos que se tardan 2 meses. 3. El Máster esta
-                      diseñada para que puedas cursarla mientras trabajas sin
+                      y hay unos que se tardan 2 meses. 
+                      <br>
+                      3. El Máster esta
+                      diseñado para que puedas cursarlo mientras trabajas sin
                       ningún problema. Cada materia te tomará. en promedio 1
                       hora diaria (lunes a viernes).
                     </div>
@@ -2157,11 +2193,7 @@
                       </div>
                     </div>
                     <div class="toggle-content pl-4">
-                      1. Si contamos con RVOE Estatal
-                      SEP-SES/21/114/01/2045/2017. Todos los alumnos que
-                      completen el programa completo y el proyecto de titulación
-                      contarán con un Diploma tanto de Iexe Universidad como de
-                      la SEP.
+                      1. Al ser un programa nuevo, se encuentra en proceso de revalidación con la SEP Federal y la SEP del Estado de Puebla. Esperamos contar con el en los próximos 6 meses. Todos nuestros programas cuentan con RVOE. Todos los alumnos que completen el programa completo y el proyecto de titulación contarán inmediatamente con un Diploma de Iexe Universidad y, 15 meses después de que obtengamos el RVOE, un Diploma de la SEP.
                     </div>
                   </div>
 
@@ -2233,7 +2265,7 @@
                       no-repeat center center / cover;
                   "
                 >
-                  <a href="#">
+                  <a href="https://mcda.iexe.edu.mx/">
                     <div class="card-body">
                       <h6
                         class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
@@ -2255,7 +2287,7 @@
                       no-repeat center center / cover;
                   "
                 >
-                  <a href="#">
+                  <a href="https://mbatec.iexe.edu.mx/">
                     <div class="card-body">
                       <h6
                         class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
@@ -2277,7 +2309,7 @@
                       no-repeat center center / cover;
                   "
                 >
-                  <a href="#">
+                  <a href="https://mti.iexe.edu.mx/index.html">
                     <div class="card-body">
                       <h6
                         class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
@@ -2333,19 +2365,19 @@
                   <div class="col-lg-4 col-6">
                     <ul class="widget_links widget-li-noicon">
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Inicio</a>
+                        <a href="index.html">Inicio</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">¿Qué ofrecemos?</a>
+                        <a href="#" data-href="#habilidades">Habilidades</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Proyectos</a>
+                        <a href="#" data-href="#que-ofrecemos">¿Qué ofrecemos?</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Plan de estudios</a>
+                        <a href="#" data-href="#plan-estudios">áreas de Especialidad</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Desglose de Materias</a>
+                        <a href="#" data-href="#plan-estudios">Plan de estudios</a>
                       </li>
                     </ul>
                   </div>
@@ -2353,10 +2385,10 @@
                   <div class="col-lg-4 col-6">
                     <ul class="widget_links widget-li-noicon">
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Q & A</a>
+                        <a href="#" data-href="#q-a">Q & A</a>
                       </li>
                       <li class="mb-2 font-weight-medium">
-                        <a href="#">Otros Programas</a>
+                        <a href="#" data-href="#otros-programas">Otros Programas</a>
                       </li>
                     </ul>
                   </div>
@@ -2411,7 +2443,7 @@
                 data-dismiss="alert"
                 aria-hidden="true"
               >
-                &times;
+                <i class="icon-line-cross icon-lg"></i>
               </button>
             </div>
           </div>
@@ -2588,6 +2620,8 @@
         });
       })();
     </script>
+
+    <!--FORMULARIOS DE REGISTRO DE LEADS-->
     <script>
       $('#requestACall').submit(function () {
         submit_form($('#requestACall'));
@@ -2607,15 +2641,13 @@
 
       function submit_form(form) {
         // Aquí puedes meter validaciones de campos
-        var especialidad = especialidad;
         var countryData = iti.getSelectedCountryData();
         var pais = countryData['iso2'];
         var extra_params =
           '&adicional=pais:%20' +
           pais +
-          '&programa=MIAA%20-%20Inteligencia%20la%20Artificial' +
-          '&especialidad=especialidad%20' +
-          '&referencia=https://miia.iexe.edu.mx/' +
+          '&programa=MIAA' +
+          '&referencia=https://miaa.iexe.edu.mx/' +
           '&charifaz=' +
           get_browser();
         var request_data = form.serialize() + extra_params;
@@ -2626,81 +2658,26 @@
           data: request_data,
           beforeSend: function () {
             // Acciones antes de lanzar la solicitud
-            $('.submitBtn').attr('disabled', 'disabled');
+            $('#submit').attr('disabled', 'disabled');
             $('.modal-body').css('opacity', '.5');
           },
           success: function (data) {
             console.log(data);
-            if (data == 'ok') {
+            if (data == 'true') {
               $('#inputName').val('');
               $('#inputEmail').val('');
               $('#tel').val('');
               $('.statusMsg').html(
-                '<span style="color:green;">Gracias por contactarnos nos pondremos en contacto pronto</span>'
+                '<span style="color:#17938F;font-weight: 700;font-size: 18px;">¡Gracias por enviar tus datos!</span>',
               );
             } else {
               $('.statusMsg').html(
-                '<span style="color:red;">Hubo un problema, porfavor intenta de nuevo</span>'
+                '<span style="color:#DB1F2D;font-weight: 700;font-size: 18px;">Hubo un problema, porfavor intenta de nuevo</span>',
               );
             }
-            $('.submitBtn').removeAttr('disabled');
+            $('.submit').removeAttr('disabled');
             $('.modal-body').css('opacity', '');
-          },
-          success: function (msg) {
-            console.log(data);
-            if (msg == 'ok') {
-              $('#inputName').val('');
-              $('#inputEmail').val('');
-              $('#tel').val('');
-
-              $('.statusMsg').html(
-                '<span style="color:green;">Gracias por contactarnos nos pondremos en contacto pronto</span>'
-              );
-            } else {
-              $('.statusMsg').html(
-                '<span style="color:red;">Hubo un problema, porfavor intenta de nuevo</span>'
-              );
-            }
-            $('.submitBtn').removeAttr('disabled');
-            $('.modal-body').css('opacity', '');
-          },
-          complete: function (data) {
-            // Acciones cuando la solicitud termine, no importa si es exitosa
-            console.log(data);
-            if (data == 'ok') {
-              $('#inputName').val('');
-              $('#inputEmail').val('');
-              $('#tel').val('');
-              $('.statusMsg').html(
-                '<span style="color:green;">Gracias por contactarnos nos pondremos en contacto pronto</span>'
-              );
-            } else {
-              $('.statusMsg').html(
-                '<span style="color:red;">Hubo un problema, porfavor intenta de nuevo</span>'
-              );
-            }
-            $('.submitBtn').removeAttr('disabled');
-            $('.modal-body').css('opacity', '');
-          },
-          complete: function (data) {
-            // Acciones cuando la solicitud termine, no importa si es exitosa
-            console.log(msg);
-            if (msg == 'ok') {
-              $('#inputName').val('');
-              $('#inputEmail').val('');
-              $('#tel').val('');
-
-              $('.statusMsg').html(
-                '<span style="color:green;">Gracias por contactarnos nos pondremos en contacto pronto</span>'
-              );
-            } else {
-              $('.statusMsg').html(
-                '<span style="color:red;">Hubo un problema, porfavor intenta de nuevo</span>'
-              );
-            }
-            $('.submitBtn').removeAttr('disabled');
-            $('.modal-body').css('opacity', '');
-          },
+          }
         });
       }
 
