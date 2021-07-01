@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-SP">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+	============================================= -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@100;200;300;400;500;600;700"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+    <link rel="stylesheet" href="../css/swiper.css" type="text/css" />
+
+    <link rel="stylesheet" href="../../css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="../css/intlTelInput.css" />
+    <link rel="stylesheet" href="../css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="../css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="../css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="../css/2.css" type="text/css" />
+    <link <link rel="stylesheet" href="../css/3.css" type="text/css" />
+    <link rel="stylesheet" href="../css/plan-estudios.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="../css/plan-estudios-addons.css"
+      type="text/css"
+    />
+  <!--FAVICONS PARA LOS ÍCONOS
+    =============================================
+    -->
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://static.iexetec.com/mba/favicons/apple-icon-120x120.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://static.iexetec.com/mba/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://static.iexetec.com/mba/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="https://static.iexetec.com/mba/favicons/manifest.json"
+    />
+    <link rel="stylesheet" href="../css/4.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="../css/colors.php?color=264653" type="text/css" />
+
+    <!-- Document Title
+	============================================= -->
+    <title>MIAA, Master in Artificial Intelligence</title>
+  </head>
+
+  <body class="stretched">
+    <!-- Side Panel -->
+    <div id="side-panel">
+      <div id="side-panel-trigger-close" class="side-panel-trigger">
+        <a href="../#"><i class="icon-line-cross"></i></a>
+      </div>
+
+      <div class="side-panel-wrap">
+        <div class="widget clearfix">
+          <a href="../index.html"><img src="../images/logo.png" height="100" /></a>
+
+          <p>
+            Leave your information to apply for a scholarship and we'll get in touch with you immediately
+          </p>
+
+          <div
+            class="hidden-xs hidden-sm widget quick-contact-widget border-0 pt-0 clearfix"
+          >
+            <p class="statusMsg"></p>
+            <form
+              id="requestACall"
+              name="requestAcall"
+              method="post"
+              class="mb-0"
+              data-alert-type="inline"
+            >
+              <div class="form-process">
+                <div class="css3-spinner">
+                  <div class="css3-spinner-scaler"></div>
+                </div>
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="required sm-form-control name"
+                  id="nombre"
+                  name="nombre"
+                  value=""
+                  placeholder="Name"
+                  data-validation-required-message="Please fill out your name."
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="text"
+                  class="required sm-form-control email"
+                  id="correo"
+                  name="correo"
+                  value=""
+                  placeholder="Email"
+                  data-validation-required-message="Please enter a valid mail."
+                />
+              </div>
+              <div class="col-12">
+                <input
+                  type="tel"
+                  id="tel"
+                  name="telefono"
+                  class="required sm-form-control phone"
+                  placeholder="Phone*"
+                  data-validation-required-message="Please fill your phone."
+                />
+              </div>
+              <button
+                type="submit"
+                id="submit"
+                name="submit"
+                class="button button-medium button-3d"
+                value="submit"
+              >
+                Send your data
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal alerta bottom de la landing -->
+    <div class="modal-registro mfp-hide" id="modal-registro">
+      <div class="card mx-auto" style="max-width: 400px">
+        <div class="card-header py-3 bg-transparent center">
+          <h3 class="mb-0 font-weight-normal">
+            ¡LEAVE YOUR DATA TO OBTAIN A SCHOLARSHIP!
+          </h3>
+        </div>
+        <div class="card-body mx-auto p-5">
+          <p class="statusMsg"></p>
+          <form
+            id="requestBCall"
+            name="login-form"
+            class="mb-0 row"
+            method="post"
+            data-alert-type="inline"
+          >
+            <div class="col-12">
+              <input
+                type="text"
+                class="required form-control form-control-lg not-dark"
+                id="nombre"
+                name="nombre"
+                value=""
+                placeholder="Name"
+              />
+            </div>
+            <div class="col-12">
+              <input
+                type="text"
+                class="required form-control form-control-lg not-dark"
+                id="correo"
+                name="correo"
+                value=""
+                placeholder="Mail"
+              />
+            </div>
+            <div class="col-12">
+              <input
+                type="tel"
+                id="tel"
+                name="telefono"
+                class="required form-control form-control-lg not-dark phone"
+                placeholder="Phone*"
+                required="required"
+                data-validation-required-message="Please fill out your phone."
+              />
+            </div>
+
+            <div class="col-12 mt-4">
+              <button
+                class="button btn-block m-0"
+                id="login-form-submit"
+                name="login-form-submit"
+                value="submit"
+              >
+                Send your data
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Document Wrapper
+	============================================= -->
+    <div id="wrapper" class="clearfix">
+      <!-- Header
+		============================================= -->
+      <header id="header" class="page-section" data-mobile-sticky="true">
+        <div id="header-wrap">
+          <div class="container">
+            <div class="header-row justify-content-between">
+              <!-- Logo
+						============================================= -->
+              <div id="logo" class="mx-0 mr-lg-5 order-2 order-lg-1">
+                <a
+                  href="../index.html"
+                  class="standard-logo pr-2"
+                  data-dark-logo="images/logo-dark.png"
+                  ><img src="../images/logo2.png" alt="Canvas Logo"
+                /></a>
+                <a
+                  href="../index.html"
+                  class="retina-logo pr-2"
+                  data-dark-logo="images/logo-dark@2x.png"
+                  ><img src="../images/logo2@2x.png" alt="Canvas Logo"
+                /></a>
+                <a
+                  href="../index.html"
+                  class="standard-logo"
+                  data-dark-logo="images/logo-dark.png"
+                  ><img src="../images/logo.png" alt="Canvas Logo"
+                /></a>
+                <a
+                  href="../index.html"
+                  class="retina-logo"
+                  data-dark-logo="images/logo-dark@2x.png"
+                  ><img src="../images/logo@2x.png" alt="Canvas Logo"
+                /></a>
+              </div>
+              <!-- #logo end -->
+
+              <div id="primary-menu-trigger" class="order-1">
+                <svg class="svg-trigger" viewBox="0 0 100 100">
+                  <path
+                    d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+                  ></path>
+                  <path d="m 30,50 h 40"></path>
+                  <path
+                    d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                id="side-panel-trigger"
+                class="header-misc order-3 side-panel-trigger"
+              >
+                <a
+                  href="../#"
+                  class="btn text-larger btn-dark bg-color px-4 py-2 rounded-pill"
+                  ><span class="d-none d-md-inline ml-2">Get in touch</span
+                  ><i class="icon-line-arrow-right"></i
+                ></a>
+              </div>
+
+              <!-- Primary Navigation
+						============================================= -->
+              <nav class="primary-menu mr-lg-auto order-12 order-lg-2">
+                <ul class="menu-container one-page-menu">
+                  <li class="menu-item current">
+                    <a class="menu-link" href="../#" data-href="../#Home"
+                      ><div>Home</div></a
+                    >
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="../#" data-href="../#Skills"
+                      ><div>Skills</div></a
+                    >
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="../#" data-href="../#que-ofrecemos"
+                      ><div>What do we offer?</div></a
+                    >
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="../#" data-href="../#plan-estudios"
+                      ><div>Academic Program</div></a
+                    >
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="../#" data-href="../#mentores"
+                      ><div>Meet your mentors</div></a
+                    >
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="../#" data-href="../#q-a"
+                      ><div>FAQ</div></a
+                    >
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="../#" data-href="../#otros-programas"
+                      ><div>Other programs</div></a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <!-- #primary-menu end -->
+            </div>
+          </div>
+        </div>
+        <div class="header-wrap-clone"></div>
+      </header>
+      <!-- #header end -->
+      <!-- Slider
+		============================================= -->
+      <section
+        id="Home"
+        class="slider-element min-vh-75"
+        style="
+          background: url('../images/hero-image.jpg') center bottom no-repeat;
+          background-size: 100% auto;
+        "
+      >
+        <div class="slider-inner">
+          <div class="vertical-middle">
+            <div class="container">
+              <div class="left mx-auto">
+                <div class="col-lg-8">
+                  <h1 class="font-weight-bold font-body" style="text-transform: uppercase;">
+                    Master in Artificial Intelligence
+                  </h1>
+                  <p
+                    class="titular-sub-title text-primary font-weight-bold left mb-5"
+                  >
+                  LEARN TO UNDERSTAND AND USE THE MAIN CURRENT TOOLS AND TecNIQUES IN ARTIFICIAL INTELLIGENCE FOR PROBLEM SOLVING AND BETTER DECISION MAKING! 
+                  </p>
+                </div>
+                <div
+                  class="widget subscribe-widget"
+                  data-loader="button"
+                >
+                  <p
+                    class="statusMsg"
+                  ></p>
+                  <form
+                    id="requestCCall"
+                    method="post"
+                    class="mb-0"
+                    data-animate="fadeInUp"
+                    data-alert-type="inline"
+                  >
+                    <div class="input-group mx-auto">
+                      <div class="col">
+                        <div class="row">
+                          <div class="col-lg-4 mb-1 mb-lg-0">
+                            <input
+                              type="name"
+                              id="nombre"
+                              name="nombre"
+                              class="form-control form-control-lg required name"
+                              placeholder="Name"
+                              style="box-shadow: none; overflow: hidden"
+                            />
+                          </div>
+                          <div class="col-lg-4 mb-1 mb-lg-0">
+                            <input
+                              type="email"
+                              id="correo"
+                              name="correo"
+                              class="form-control form-control-lg required email"
+                              placeholder="Mail"
+                              style="box-shadow: none; overflow: hidden"
+                            />
+                          </div>
+                          <div class="col-lg-4 mb-1 mb-lg-0">
+                            <input
+                              type="tel"
+                              id="tel"
+                              name="telefono"
+                              class="form-control form-control-lg required phone"
+                              placeholder="Phone*"
+                              required="required"
+                              data-validation-required-message="Please fill your phone."
+                              style="box-shadow: none; overflow: hidden"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 mb-1 mb-lg-0 input-group-append">
+                        <button
+                          href="../#"
+                          class="btn btn-danger button-large font-weight-normal"
+                          type="submit"
+                          style="border-radius: 3px"
+                        >
+                          Request information now
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content
+		============================================= -->
+      <section id="content">
+        <div class="content-wrap py-5">
+          <div class="container">
+            <div
+              class="row justify-content-between align-items-center col-mb-30"
+            >
+              <div class="col-md-7">
+                <h3 class="mb-0 font-weight-normal">
+                  We shape our students in the skills and tools they need to start a career in Tecnology that will allow them to rewrite their future.
+                </h3>
+              </div>
+              <div class="col-md-5 mt-4 mt-md-0">
+                <blockquote class="py-0 mb-0">
+                  <p>
+                    Due to our academic program designed by experts with experience in the industry, oriented to continuous practice from entry, our students graduate with the necessary preparation to intervene and contribute to the achievement of objectives and goals of any company.
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="container mt-4" id="what-skills-you-will-learn">
+            <div class="container text-center">
+              <div class="heading-block center">
+                <h3 class="color ls0"> WHAT SKILLS WILL YOU LEARN?</h3>
+              </div>
+
+              <p>
+                We want the student to be capable in the field of artificial intelligence by implementing solutions based on data analysis, machine learning applied to high demand scenarios in the industry, such as natural language processing, recommender systems and computer vision. The objective is for the student to develop a deep understanding of the theory and fundamentals of artificial intelligence, as well as the practical skills needed to implement intelligent computing systems.
+              </p>
+            </div>
+
+              <div class="row col-mb-50">
+                <div class="col-md-6">
+                  <div class="feature-box fbox-plain">
+                    <div class="fbox-icon">
+                      <a href="../#"><i class="i-alt">1.</i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h3>COMPUTER VISION</h3>
+                      <p>
+                        <ul>
+                          <li>Object detection in images</li>
+                          <li>Apply filters on photographs</li>
+                          <li>Barcode reader</li>
+                          <li>Facial recognition</li>
+                          <li>Optical Character Recognition (OCR)</li>
+                          <li>Augmented reality projects</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="feature-box fbox-plain">
+                    <div class="fbox-icon">
+                      <a href="../#"><i class="i-alt">2.</i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h3>RECOMMENDER SYSTEMS</h3>
+                      <p>
+                        <ul>
+                          <li>Product-based recommender systems (Netflix, Amazon, Yelp)</li>
+                          <li>People-based recommender systems (social networks, dating sites)</li>
+                          <li>Augmented search engines (auto-complete search terms)</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row col-mb-50">
+
+                <div class="col-md-6">
+                  <div class="feature-box fbox-plain">
+                    <div class="fbox-icon">
+                      <a href="../#"><i class="i-alt">3.</i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h3>BODY LANGUAGE PROCESSING</h3>
+                      <p>
+                        <ul>
+                          <li>Chatbots Training.</li>
+                          <li>Text Sentiment Analysis</li>
+                          <li>SPAM Detection</li>
+                          <li>Fake News Detection</li>
+                          <li>Keyword extraction</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div
+            class="section dark bg-color"
+            style="padding: 100px 0"
+            id="que-ofrecemos"
+          >
+            <div class="container">
+              <div class="heading-block mw-xs mx-auto text-center mb-6">
+                <h3 class="text-white ls0">WHAT DO WE OFFER?</h3>
+              </div>
+              <div class="row services-grid gutter-30 position-relative">
+                <div
+                  style="
+                    background-image: url(images/grid.svg);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 50vw;
+                    height: 50vh;
+                    opacity: 0.15;
+                    transform: translate(-50%, -50%);
+                  "
+                ></div>
+                <img
+                  class="op-05"
+                  src="../images/grid.svg"
+                  alt="Grid Image"
+                  style="
+                    position: absolute;
+                    left: -20px;
+                    top: -30px;
+                    z-index: -1;
+                  "
+                />
+                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0"
+                    style="
+                      background-image: linear-gradient(#00446927, #00486570),
+                        url('../images/services/6.jpg');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"
+                        ><i class="icon-line-briefcase color-2"></i
+                      ></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                      100% Digital and Part-Time Program
+                      </h4>
+                      <p>
+                        IEXETec offers a remote learning experience, 100% online. The global community, as well as the staff, are accessible all the time using all modern communication channels. 
+                        Academic program designed by specialists with global experience and human resources managers from Tecnology companies.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0"
+                    style="
+                      background-image: linear-gradient(#2646532b, #264653f7),
+                        url('../images/services/2.jpg');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"><i class="icon-line-paper color-2"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                      Academic programs designed by specialists with global experience and human resources executives from Tecnology companies.
+                      </h4>
+                      <p>
+                        The academic program is designed with input from experts in computing, data science, artificial intelligence, cybersecurity and Tecnology, as well as hiring managers from real companies.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0"
+                    style="
+                      background-image: linear-gradient(#264653a8, #264653),
+                        url('../images/services/3.jpg');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"><i class="icon-line-flag color-2"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                      Practical experience based on mastery of the Tecnical skills most needed by employers.
+                      </h4>
+                      <p>
+                        Each of our students graduates with over 200 hours of Tecnical experience and must demonstrate mastery of course material by completing monthly group projects and creating real products proposed by companies in the industry.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!--<div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0"
+                    style="
+                      background-image: linear-gradient(#26465398, #264653),
+                        url('../images/services/4.jpg');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"><i class="icon-line-users color-2"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                        Revalidación SEP
+                      </h4>
+                      <p>
+                        Este programa cuenta con el respaldo de IEXE
+                        Universidad, una institución educativa reconocida por la
+                        Secretaria de Educación Pública (SEP), por lo que cuenta
+                        con validez oficial.
+                      </p>
+                    </div>
+                  </div>
+                </div>-->
+
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0"
+                    style="
+                      background-image: linear-gradient(#264653a8, #264653),
+                        url('../images/services/5.jpg');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"><i class="icon-line-globe color-2"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                      1-1 Mentoring
+                      </h4>
+                      <p>
+                        Students receive mentoring and advice from them for life that can introduce them to new opportunities and offer professional career support.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0"
+                    style="
+                      background-image: linear-gradient(#26465398, #264653),
+                        url('../images/services/1.jpg');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"
+                        ><i class="icon-line-dollar-sign color-2"></i
+                      ></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                      Low cost
+                      </h4>
+                      <p>
+                        Affordable and fair cost, less than half the cost of other universities, we make sure your investment is immediately rewarded by helping you find a job!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <img
+                  src="../images/grid.svg"
+                  alt="Grid Image"
+                  class="op-05"
+                  style="
+                    position: absolute;
+                    right: -20px;
+                    bottom: 0;
+                    z-index: -1;
+                  "
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="container mt-6">
+            <div class="container text-center">
+              <div class="heading-block center">
+                <h3 class="color ls0">BUILD REAL PROJECTS</h3>
+              </div>
+
+              <p>
+                Our teaching method is based on the collaborative environment,
+                based on real-world projects, where students
+                they will build real products. During the program, the student
+                will be able to develop real projects on a monthly basis
+                proposed by companies in the sector. All our classes are
+                remote and interactive.
+              </p>
+            </div>
+            <div class="row justify-content-center col-mb-50">
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                  <div class="fbox-media">
+                    <img
+                      src="https://static.iexetec.com/mca/assets/clases-interactivas.png"
+                      alt="Why choose Us?"
+                    />
+                  </div>
+                  <div class="fbox-content text-center px-0">
+                    <h2>LIVE SESSIONS</h2>
+                    <p>
+                      We hold videoconferences with our students and
+                      invited speakers, sessions are made use of
+                      advanced engineering tools and talks about
+                      current issues in the Tecnology industry.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                  <div class="fbox-media">
+                    <img
+                      src="https://static.iexetec.com/mca/assets/colaboracion.png"
+                      alt="Why choose Us?"
+                    />
+                  </div>
+                  <div class="fbox-content text-center px-0">
+                    <h2>REAL PROJECTS</h2>
+                    <p>
+                      The student must demonstrate mastery of the course material
+                      completing monthly projects and creating real products
+                      proposed by companies in the sector.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                  <div class="fbox-media">
+                    <img
+                      src="https://static.iexetec.com/mca/assets/1-mentores.png"
+                      alt="Why choose Us?"
+                    />
+                  </div>
+                  <div class="fbox-content text-center px-0">
+                    <h2>MENTORING AND ADVICE</h2>
+                    <p>
+                      All of our mentors have extensive knowledge in
+                      current Tecnologies and extensive work experience.
+                      They provide timely and clear feedback
+                      about our curriculum.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clear"></div>
+
+          <!--Areas of specialty-->
+          <div
+            class="section light"
+            style="padding: 100px 0"
+            id="areas-especialidad"
+          >
+            <div class="container">
+              <div class="heading-block mw-xs mx-auto text-center mb-6">
+                <h3 class="color ls0">Areas of specialty</h3>
+              </div>
+              <div class="row services-grid gutter-30 position-relative">
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0 text-white"
+                    style="
+                      background-image: linear-gradient(#00384ea8, #003347),
+                        url('../images/services/areas-especialidad.png');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"
+                        ><i class="icon-line-dollar-sign color-2"></i
+                      ></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="text-white font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                        FinTec
+                      </h4>
+                      <p class="text-white">
+                        This sector is the fastest growing in Mexico because it gives
+                      response to new financial challenges will allow you
+                      lead the new Digital Banking and the FinTec ecosystem.
+                        <ul class="iconlist">
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            Fraud prevention in digital payments.
+                          </li>
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            Optimization of credit portfolio and customer segments.
+                          </li>
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            Development of automated systems for stock trading.
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0 text-white"
+                    style="
+                      background-image: linear-gradient(#00384ea8, #003347),
+                        url('../images/services/areas-especialidad.png');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"><i class="icon-line-paper color-2"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="text-white font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                        Marketing with Data
+                      </h4>
+                      <p class="text-white">
+                        The two most outstanding advances in the Marketing area come from the study of consumer behavior with neurological Tecniques (Neuromarketing) and the development of digital tools.
+                        <ul class="iconlist">
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            To understand the criteria for success in this field and to be able to extract and analyze data from the Internet and combine them with data sources. 
+                          </li>
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            That the student knows the Tecniques of data analysis and machine learning relevant to marketing.
+                          </li>
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            That the student knows the basic concepts of marketing and digital marketing.
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0 text-white"
+                    style="
+                      background-image: linear-gradient(#00384ea8, #003347),
+                        url('../images/services/areas-especialidad.png');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"><i class="icon-line-flag color-2"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="text-white font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                      Geostatistics
+                    </h4>
+                      <p class="text-white">
+                        The fastest growing companies in the startup sector worldwide are those related to mobility, transportation and geostatistics.
+
+                        <ul class="iconlist">
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            You will learn the fundamental concepts of geospatial data representation; being able to build Geographic Information Systems.
+                          </li>
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            You will learn the fundamental concepts of geospatial data representation; being able to build Geographic Information Systems.
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 d-flex align-self-stretch">
+                  <div
+                    class="feature-box flex-column h-shadow mx-0 text-white"
+                    style="
+                      background-image: linear-gradient(#00384ea8, #003347),
+                        url('../images/services/areas-especialidad.png');
+                    "
+                  >
+                    <div class="fbox-icon mb-4">
+                      <a href="../#"><i class="icon-line-globe color-2"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h4
+                        class="text-white font-body font-weight-semibold h4 mb-4 mt-2 ls0"
+                      >
+                      Data and Public Policy
+                    </h4>
+                      <p class="text-white">
+                        We are at a unique moment in the history of public policy: the union of knowledge, Tecnology and data science.
+                        <ul class="iconlist">
+                          <li>
+                            <i class="icon-check text-smaller"></i>
+                            This area represents a specialized learning opportunity for students who wish to perform statistical analysis and econometrics.
+                          </li>
+                        </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clear"></div>
+          
+          <div
+            class="container topmargin-lg bottommargin-lg clearfix"
+            id="plan-estudios"
+          >
+            <div class="mx-auto">
+              <div class="container text-center">
+                <div class="heading-block center">
+                  <h3 class="color ls0">HOW DOES THE ACADEMIC PROGRAM WORK?</h3>
+                  <p
+                    class="titular-sub-title text-primary font-weight-bold left mb-5"
+                  >
+                  COMMON CORE
+                  </p>
+                </div>
+                <p>
+                  It is designed for participants to develop fundamental skills in software development specializing in machine learning and artificial intelligence during the first 9 months of the Master's program. The program is designed from the ground up to provide all students with the basic programming, data analysis and confidence skills necessary for their career.
+                </p>
+              </div>
+              <div
+                class="tabs tabs-alt tabs-responsive tabs-justify clearfix"
+                id="tab"
+              >
+                <ul class="tab-nav clearfix">
+                  <li>
+                    <a href="../#tabs-1" class="story-title"
+                      ><i class="icon-line-database"></i><h3>Fundamentals of Artificial Intelligence</h3></a
+                    >
+                  </li>
+                  <li>
+                    <a href="../#tabs-2" class="story-title"
+                      ><i class="icon-line-archive"></i><h3>Advanced knowledge of Artificial Intelligence</h3></a
+                    >
+                  </li>
+                  <li>
+                    <a href="../#tabs-3" class="story-title"
+                      ><i class="icon-line-box"></i><h3>Artificial Intelligence Applications</h3></a
+                    >
+                  </li>
+                </ul>
+
+                <div class="tab-container">
+                  <div class="tab-content clearfix" id="tabs-1">
+                    <div class="story-box description-left clearfix">
+                      <div class="story-box-image">
+                        <img
+                          src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/tronco/fundamentos-ia.jpg"
+                          alt="story-image"
+                        />
+                      </div>
+                      <div class="story-box-info">
+                        <h3 class="story-title">
+                          Fundamentals of Artificial Intelligence:
+                          <strong>3 meses</strong>
+                        </h3>
+                        <div class="story-box-content">
+                          <p>
+                            Students are introduced to artificial intelligence theory, programming and data analysis. Students will gain experience in basic programming using variables, control flow statements and data structures. They will also design a relational database and learn the SQL structured query language for database manipulation.
+                          </p>
+                          <ul class="iconlist">
+                            <li><strong>Areas of focus:</strong></li>
+                            <li>
+                              <i class="icon-ok-sign"></i>
+                              Artificial Intelligence Theory: evolutionary programming, A*, minimax, knowledge representation.
+                            </li>
+                            <li>
+                              <i class="icon-ok-sign"></i>Variables, statements, operators, cycles, data structures.
+                            </li>
+                            <li>
+                              <i class="icon-ok-sign"></i>Entity–relationship model, SQL, transactions, analytical functions
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-content clearfix" id="tabs-2">
+                    <div class="story-box clearfix">
+                      <div class="story-box-image">
+                        <img
+                          src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/tronco/conocimientos-avanzados.jpg"
+                          alt="story-image"
+                        />
+                      </div>
+                      <div class="story-box-info">
+                        <h3 class="story-title">
+                          Advanced knowledge of Artificial Intelligence:
+                          <strong>6 Months</strong>
+                        </h3>
+                        <div class="story-box-content">
+                          <p>
+                            This block develops data analysis, algorithms and Tecniques of Machine Learning and cloud computing. Students will learn about the different cloud infrastructure providers, the advantages and disadvantages of each one, acquiring practical knowledge in different managed services. They will also learn the Tecniques to analyze and represent data correctly and concisely. Finally students learn how to create, train and measure generic Machine Learning models, which will be the foundations of the Artificial Intelligence applications of the next block.
+                          </p>
+                          <ul class="iconlist">
+                            <li><strong>Focus areas:</strong></li>
+                            <li>
+                              <i class="icon-ok-sign"></i>
+                              Object-oriented programming, libraries, advanced functions.
+                            </li>
+                            <li>
+                              <i class="icon-ok-sign"></i>Types of charts, data representation, visualization
+                            </li>
+                            <li>
+                              <i class="icon-ok-sign"></i>Machine Learning algorithms, classification, regression, validation and main libraries.
+                            </li>
+                            <li>
+                              <i class="icon-ok-sign"></i>IaaS, PaaS, SaaS, Parallel Processing, Cost Models
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tab-content clearfix" id="tabs-3">
+                    <div class="story-box description-left clearfix">
+                      <div class="story-box-image">
+                        <img
+                          src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/tronco/aplicaciones-ia.jpg"
+                          alt="story-image"
+                        />
+                      </div>
+                      <div class="story-box-info">
+                        <h3 class="story-title">
+                          Artificial Intelligence Applications:
+                          <strong>6 Months</strong>
+                        </h3>
+                        <div class="story-box-content">
+                          <p>
+                            Students will learn the theoretical foundations and the main tools to create Artificial Intelligence applications with higher labor demand such as recommendation systems, natural language processing and computer vision.
+                            <br/>
+                            They will develop several projects focused on creating products that solve real problems in these disciplines, using real public data.
+                            <br/>
+                            The objective of these projects is for students to design a product that covers the entire life cycle of an Artificial Intelligence system, so that the product has the capacity to be monetizable or have great curricular weight.
+
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Academic Program DESGLOSE DE MATERIAS-->
+          <div class="container mt-6 clearfix" id="plan-estudios">
+            <div class="container text-center">
+              <div class="heading-block center">
+                <h3 class="color ls0">THE SUBJECTS YOU WILL TAKE</h3></h3>
+              </div>
+              <p>
+                Throughout our program, students use a variety of resources, including recommended reading material, core theoretical content and collaboration with classmates to develop their knowledge. 
+              </p>
+            </div>
+            <div class="grid-filter-wrap">
+              <!-- Portfolio Filter
+						============================================= -->
+              <ul class="grid-filter" data-container="#portfolio">
+                <li class="activeFilter">
+                  <a href="../#" data-filter="*">Show all</a>
+                </li>
+                <li>
+                  <a href="../#" data-filter=".PRP"
+                    >Propaedeutic course</a
+                  >
+                </li>
+                <li>
+                  <a href="../#" data-filter=".T1"
+                    >First Term</a
+                  >
+                </li>
+                <li>
+                  <a href="../#" data-filter=".T2"
+                    >second Term</a
+                  >
+                </li>
+                <li>
+                  <a href="../#" data-filter=".T3"
+                    >Third Term</a
+                  >
+                </li>
+                <li>
+                  <a href="../#" data-filter=".T4"
+                    >Fourth Term</a
+                  >
+                </li>
+                <li>
+                  <a href="../#" data-filter=".T5"
+                    >Fifth Term</a
+                  >
+                </li>
+              </ul>
+              <!-- .grid-filter end -->
+
+              <div class="grid-shuffle rounded" data-container="#portfolio">
+                <i class="icon-random"></i>
+              </div>
+            </div>
+
+            <!-- Grid Items
+					============================================= -->
+            <div
+              class="portfolio row grid grid-container gutter-20"
+              id="portfolio"
+              data-layout="fitRows"
+            >
+            <div
+                class="grid-item portfolio-item PRP col-12 col-sm-6 col-md-4 col-lg-3"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/academic-program-en/17.png"
+                  class="grid-inner img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/17.png"
+                    alt="img01"
+                  />
+                  <div class="description description-grid">
+                    <h3>FUNDAMENTALS OF PROBABILITY AND LINEAR ALGEBRA.</h3>
+                    <span>Propaedeutic</span>
+                    <p>
+                      In this class you will learn how and why machine learning algorithms work using fundamental concepts of Probability and Statistical Inference. You will learn to develop hypothesis tests, their elements and interpretations.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item portfolio-item T1 col-12 col-sm-6 col-md-4 col-lg-3"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/16.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/16.png"
+                    alt="img02"
+                  />
+                  <div class="description description-grid">
+                    <h3>DATA SCIENCE PROGRAMMING</h3>
+                    <span>First Term</span>
+                    <p>
+                      El objetivo de esta clase es que aprendas los fundamentos de programación usando el lenguaje Python, que es el lenguaje más popular para hacer modelos de Ciencia de Datos. En este lenguaje existen muchas bibliotecas y herramientas que te van a ayudar al procesamiento de datos y generar modelos estadísticos.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T1"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/18.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/18.png"
+                    alt="img03"
+                  />
+                  <div class="description description-grid">
+                    <h3>RELATIONAL DATABASE</h3>
+                    <span>First Term</span>
+                    <p>
+                      El objetivo de esta clase es presentar los conceptos más importantes para diseñar una base de datos relacional y el lenguaje SQL para realizar consultas y cambios a los datos. Aprenderás desde el modelo conceptual de una base de datos, la estructura básica de todas las instrucciones de SQL y a ejecutar consultas avanzadas de analítica de datos.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T1"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/19.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/19.png"
+                    alt="img08"
+                  />
+                  <div class="description description-grid">
+                    <h3>NON-RELATIONAL DATABASE</h3>
+                    <span>First Term</span>
+                    <p>
+                      En esta clase conocerás los fundamentos de un sistema de cómputo distribuido y cómo afectan a una base de datos. Entenderás a detalle los diferentes paradigmas de bases de datos no relacionales y los problemas en los que son óptimos cada paradigma. Tendrás experiencia usando una de las bases de datos no relacionales más populares: MongoDB
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/20.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/20.png"
+                    alt="img09"
+                  />
+                  <div class="description description-grid">
+                    <h3>Manejo de Grandes Volúmenes</h3>
+                    <span>Second Term</span>
+                    <p>
+                      En esta clase aprenderás a usar las herramientas que te ayudarán a procesar archivos sin
+                      importar la escala de tus datos, ya sea para unos cuantos registros o cientos de gigabytes
+                      de datos. En esta clase aprenderás a usar los comandos de UNIX, generar scripts de Bash
+                      para automatizar procesos de limpieza y procesamiento de datos para poder hacer
+                      consultas usando herramientas especializadas.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/21.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/21.png"
+                    alt="img10"
+                  />
+                  <div class="description description-grid">
+                    <h3>Análisis Descriptivo</h3>
+                    <span>Second Term</span>
+                    <p>
+                      En esta materia desarrollarás las Skills técnicas y el conocimiento
+                      teórico necesario para llevar a cabo análisis descriptivos de manera
+                      exitosa a lo largo de todo el proceso de análisis de datos.
+                      Desde el Análisis Exploratorio de Datos para para evaluar la calidad,
+                      estructura y tipo o para encontrar patrones en los datos.
+                      Además aprenderás a transmitir la información de manera correcta,
+                      contar una historia con los datos de manera que podamos transmitir
+                      lo aprendido de manera honesta, clara, concisa y emocionante.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T2"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/22.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/22.png"
+                    alt="img11"
+                  />
+                  <div class="description description-grid">
+                    <h3>Ética y legalidad</h3>
+                    <span>Second Term</span>
+                    <p>
+                      En este curso indagaremos en la ética de la Inteligencia Artificial y la Ciencia de Datos mediante el estudio de los datos, de los métodos utilizados para recopilarlos y de las técnicas utilizadas para procesarlos. Además, analizaremos las principales aproximaciones éticas y legales que están siendo utilizadas para guiar el desarrollo de nuevas tecnologías a nivel internacional.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/23.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/23.png"
+                    alt="img12"
+                  />
+                  <div class="description description-grid">
+                    <h3>Infraestructura en la Nube</h3>
+                    <span>Third Term</span>
+                    <p>
+                      En esta materia conocerás los orígenes del cómputo en la nube, y cómo ha revolucionado las aplicaciones y sistemas de miles de empresas, desde startups hasta bancos e instituciones gubernamentales. Aprenderás cómo los modelos de servicio en la nube y los modelos de costo de los principales proveedores de infraestructura en la nube, además de cómo mantener la seguridad de la información que se almacena en la nube. Además desarrollarás actividades usando la plataforma de Amazon Web Services.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/24.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/24.png"
+                    alt="img13"
+                  />
+                  <div class="description description-grid">
+                    <h3>Aprendizaje de Máquina I</h3>
+                    <span>Third Term</span>
+                    <p>
+                      El objetivo de esta clase es que conozcas los fundamentos de
+                      aprendizaje de máquina y los algoritmos más utilizados en esta disciplina.
+                      Además podrás identificar los tipos de problemas donde se ocupan los diferentes
+                      algoritmos que se ven en la clase. Además aprenderás a crear experimentos para
+                      entrenar y probar los algoritmos para encontrar los parámetros de aprendizaje óptimos
+                      para tu modelo.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T3"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/25.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/25.png"
+                    alt="img14"
+                  />
+                  <div class="description description-grid">
+                    <h3>Productos de Datos</h3>
+                    <span>Third Term</span>
+                    <p>
+                      En esta clase vas a aprender a transformar un modelo predictivo en un producto que se puede integrar a la operación del negocio mediante una interfaz de cómputo a través de la cual otros sistemas pueden comunicar e interactuar con el modelo. De esta forma el modelo cobra vida y tendrá un impacto directo en el negocio y no sólo se queda como una buena idea.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/26.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/26.png"
+                    alt="img15"
+                  />
+                  <div class="description description-grid">
+                    <h3>Aplicaciones de Ciencia de Datos</h3>
+                    <span>Fourth Term</span>
+                    <p>
+                      El objetivo de esta materia es que conozcas las herramientas que te ayudan a desarrollar un flujo automatizado para la ingesta de datos hasta la creación y selección del modelo para incorporarlo a un ambiente de cómputo productivo.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/27.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/27.png"
+                    alt="img16"
+                  />
+                  <div class="description description-grid">
+                    <h3>Cómputo de Datos Masivos</h3>
+                    <span>Fourth Term</span>
+                    <p>
+                      Esta materia está enfocada en el almacenamiento, procesamiento e
+                      inferencia de grandes cantidades de datos. Desde herramientas para
+                      procesamiento de datos como Hadoop y Spark hasta marcos de
+                      trabajo como PyTorch, Tensorflow y SageMaker. Utilizarás múltiples
+                      herramientas e infraestructura en la nube de Amazon Web Services
+                      con arquitectura escalable.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T4"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/28.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/28.png"
+                    alt="img17"
+                  />
+                  <div class="description description-grid">
+                    <h3>Aprendizaje de Máquina II</h3>
+                    <span>Fourth Term</span>
+                    <p>
+                      En este curso se profundiza en la ingeniería de variables y reducción de la dimensionalidad,
+                      técnicas de suma importancia para que el modelo predictivo se comporte adecuadamente
+                      con nuevos datos. Además aprenderás sobre redes neuronales, y aprendizaje profundo,
+                      sus aplicaciones, y su implementación con la librería de Pytorch. También aprenderás
+                      sobre aprendizaje por refuerzo, y cómo implementar un proyecto usando
+                      estas técnicas avanzadas.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/29.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/29.png"
+                    alt="img18"
+                  />
+                  <div class="description description-grid">
+                    <h3>Procesamiento de Lenguaje Natural II</h3>
+                    <span>Fifth Term</span>
+                    <p>
+                      En esta área vas a conocer cómo desarrollar sistemas
+                      inteligentes que entiendan el lenguaje escrito para
+                      determinar aspectos interesantes del contexto mediante el
+                      análisis de la estructura sintáctica y semántica del
+                      texto. Por ejemplo: saber si una crítica de una película
+                      es buena o mala, entender si un diálogo es amistoso o no,
+                      comprender qué participantes tienen una opinión en común.
+                      Existe una gran demanda de productos como chatbots que
+                      interpreten la necesidad del cliente, detectar plagios en
+                      obras literarias, clasificar documentos legales en base a
+                      su naturaleza, etc.
+                    </p>
+                    <div class="details">
+                      <ul>
+                        <li>
+                          <i class="icon icon-line-camera"></i
+                          ><span>Aplicaciones de Inteligencia Artificial</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/30.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/30.png"
+                    alt="img19"
+                  />
+                  <div class="description description-grid">
+                    <h3>Seminario de Investigación</h3>
+                    <span>Fifth Term</span>
+                    <p>
+                      En esta materia aprenderás el rol de la inteligencia
+                      artificial en empresas modernas, la transformación digital
+                      que implican estos sistemas y que obtengas las
+                      herramientas necesarias para desempeñarte exitosamente en
+                      el campo laboral.
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="grid-item col-12 col-sm-6 col-md-4 col-lg-3 T5"
+                data-size="1280x853"
+              >
+                <a
+                  href="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/31.png"
+                  class="img-wrap"
+                  data-animate="fadeInUp"
+                  onclick="return false;"
+                >
+                  <img
+                    src="https://s3.us-east-2.amazonaws.com/static.iexetec/mcda/academic-program-en/31.png"
+                    alt="img19"
+                  />
+                  <div class="description description-grid">
+                    <h3>Optativa II: Proyecto de Titulación</h3>
+                    <span>Fifth Term</span>
+                    <p>
+                      Que el alumno tenga un panorama de el rol de los datos en las empresas.
+                      - Que el alumno esté consciente de los factores importantes
+                      involucrados en la transformación digital
+                      - Que el alumno tenga los elementos correctos para efectuar una
+                      búsqueda de trabajo exitosa
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <!-- /grid -->
+            <div class="preview">
+              <button class="action action-close">
+                <i class="icon-line2-close"></i
+                ><span class="text-hidden">Close</span>
+              </button>
+              <div class="description description-preview"></div>
+            </div>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="container mt-6" id="mentores">
+            <div class="container text-center">
+              <div class="heading-block center">
+                <h3 class="color ls0">MEET YOUR MENTORS</h3>
+              </div>
+              <p>
+                A job board where we integrate the projects that our students have built in collaborative teams, live sessions with professional mentors and connections with job opportunities in real companies.
+              </p>
+            </div>
+            <div
+              id="oc-images"
+              class="owl-carousel image-carousel carousel-widget owl-loaded owl-drag with-carousel-dots"
+              data-items-xs="2"
+              data-items-sm="3"
+              data-items-lg="4"
+              data-items-xl="5"
+            >
+              <div class="owl-stage-outer">
+                <div
+                  class="owl-stage"
+                  style="
+                    transform: translate3d(0px, 0px, 0px);
+                    transition: all 0s ease 0s;
+                    width: 1834px;
+                  "
+                >
+                  <!--Admer valdivieso-->
+                  <div
+                    class="owl-item active"
+                    style="width: 630px; margin-right: 30px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/admer-valdivieso.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Admer Valdivieso</h4>
+                            <span
+                              >Especialista de Análitica e Ingeniería de Datos |
+                              Grupo Modelo</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/alejandro-hernandez.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Alejandro Hernández Farías</h4>
+                            <span
+                              >Innovation & Analytics Manager | Grupo
+                              Modelo</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/alfonso-kim.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Alfonso Kim</h4>
+                            <span>CTO | IEXETec</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/arturo-marquez.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Arturo Márquez Flores</h4>
+                            <span>Machine Learning Specialist | Bitso</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Federico Riveroll-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/federico-riveroll.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Federico Riveroll</h4>
+                            <span>Gerente de Analítica e Innovación</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Frida Geyne-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/frida-geyne.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Frida Geyne</h4>
+                            <span>Gerente de Ciencia de Datos | Nielsen</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Gabriela Vargas-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/gabriela-vargas.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Gabriela Vargas</h4>
+                            <span>Operations Intelligence Manager</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Javier Mondragón-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/javier-mondragon.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Javier Mondragón</h4>
+                            <span>Data Analyst | Bitso</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Jorge Manjarrez-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/jorge-manjarrez.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Jorge Manjarres</h4>
+                            <span
+                              >Profesor e investigador en Ciencias en
+                              Computación</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Liliana Millán-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/liliana-millan.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Liliana Millán</h4>
+                            <span
+                              >Tecnical Mentor, Imperial College London</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Silvia Ariza-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/silvia-ariza.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Silvia Ariza</h4>
+                            <span>Chief Data Scientist | Didi</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Salvador García-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/salvador-garcia.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Salvador García</h4>
+                            <span>Data Science Director en Grupo Salinas</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Wilmer Pereira-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/wilmer-pereira.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Wilmer Efrén Pereira</h4>
+                            <span
+                              >Profesor e investigador en Ciencias en
+                              Computación</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Rodolfo Conde-->
+                  <div
+                    class="owl-item active"
+                    style="width: 260px; margin-right: 20px"
+                  >
+                    <div class="oc-item">
+                      <div class="team">
+                        <div class="team-image">
+                          <img
+                            src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/maestros/rodolfo-conde.png"
+                            alt="Admer Valdivieso"
+                          />
+                        </div>
+                        <div class="team-desc">
+                          <div class="team-title">
+                            <h4>Rodolfo Conde</h4>
+                            <span
+                              >Profesor de licenciatura y Máster, ITAM</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="owl-nav">
+                <button
+                  type="button"
+                  role="presentation"
+                  class="owl-prev disabled"
+                >
+                  <i class="icon-angle-left"></i></button
+                ><button type="button" role="presentation" class="owl-next">
+                  <i class="icon-angle-right"></i>
+                </button>
+              </div>
+              <!--<div class="owl-dots">
+                <button role="button" class="owl-dot active">
+                  <span></span></button
+                ><button role="button" class="owl-dot"><span></span></button>
+              </div>-->
+            </div>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="container mt-4">
+
+					<h3 class="center">COMPANIES THEY HAVE WORKED</h3>
+
+					<div id="oc-clients-full" class="owl-carousel owl-carousel-full image-carousel carousel-widget owl-loaded owl-drag" data-margin="30" data-nav="true" data-pagi="false" data-autoplay="5000" data-items-xs="3" data-items-sm="3" data-items-md="5" data-items-lg="6" data-items-xl="7">
+					<div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-1106px, 0px, 0px); transition: all 0.25s ease 0s; width: 2656px;"><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="../#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/amazon.png" alt="Brands"></a></div></div><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="../#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/bitso-logo.png" alt="Brands"></a></div></div><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="../#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/iexe-logo.png" alt="Brands"></a></div></div><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="../#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/konfio.png" alt="Brands"></a></div></div><div class="owl-item" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="../#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/zubale.png" alt="Brands"></a></div></div><div class="owl-item active" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="../#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/prudential.png" alt="Brands"></a></div></div><div class="owl-item active" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="../#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/gonzales-calvillo.png" alt="Brands"></a></div></div>
+          <div class="owl-item active" style="width: 191.314px; margin-right: 30px;"><div class="oc-item"><a href="../#"><img src="https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/logos/google.png" alt="Brands"></a></div></div>
+        </div>
+        </div>
+        <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="icon-angle-left"></i></button><button type="button" role="presentation" class="owl-next disabled"><i class="icon-angle-right"></i></button></div><div class="owl-dots disabled"></div>
+          </div>
+				</div>
+
+          <div class="clear"></div>
+
+          <div class="container mt-6">
+            <div class="container text-center">
+              <div class="heading-block center">
+                <h3 class="color ls0">
+                  MAKE YOURSELF KNOWN ON OUR NEW PLATFORM </h3>
+              </div>
+              <p>
+                A job board where we integrate the projects that our students have built in collaborative teams, live sessions with professional mentors and connections with job opportunities in real companies. 
+              </p>
+            </div>
+            <div class="row justify-content-center col-mb-50">
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                  <div class="fbox-media">
+                    <img
+                      src="https://static.iexetec.com/mca/assets/proyectos.png"
+                      alt="Why choose Us?"
+                    />
+                  </div>
+                  <div class="fbox-content center text-center px-0">
+                    <h2>SHOWCASE REAL PROJECTS</h2>
+                    <p>
+                      Submit your classroom projects to the world.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                  <div class="fbox-media">
+                    <img
+                      src="https://static.iexetec.com/mca/assets/showcase-alumnos.png"
+                      alt="Why choose Us?"
+                    />
+                  </div>
+                  <div class="fbox-content center text-center px-0">
+                    <h2>STUDENTS SHOWCASE</h2>
+                    <p>
+                      Connect directly with our mentors, experts and protagonists and get personalized mentoring.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-4">
+                <div class="feature-box media-box">
+                  <div class="fbox-media">
+                    <img
+                      src="https://static.iexetec.com/mca/assets/bolsa-trabajo.png"
+                      alt="Why choose Us?"
+                    />
+                  </div>
+                  <div class="fbox-content center text-center px-0">
+                    <h2>MENTORING AND COUNSELING</h2>
+                    <p>
+                      Search for vacancies, apply and connect directly with companies. Connect directly with our mentors, experts and protagonists and get personalized mentoring.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clear"></div>
+
+          <div class="container clearfix mt-6" id="q-a">
+            <div class="row justify-content-center">
+              <div class="col-xl-6 col-lg-8 text-center mb-6">
+                <p class="mb-2 text-info text-uppercase ls2 text-smaller">
+                  FAQ
+                </p>
+                <h3 class="h1 font-weight-bold mb-3">FREQUENTLY ASKED QUESTIONS</h3>
+              </div>
+              <div class="col-lg-8">
+                <div class="clear"></div>
+
+                <div id="faqs" class="faqs">
+                  <div class="toggle faq pb-3 mb-3 faq-marketplace faq-legal">
+                    <div class="toggle-header">
+                      <div class="toggle-icon">
+                        <i class="toggle-closed icon-question-sign"></i>
+                        <i class="toggle-open icon-question-sign"></i>
+                      </div>
+                      <div class="toggle-title pl-1">
+                        HOW LONG DOES IT TAKE? HOW MUCH TIME DO I NEED TO DEDICATE?
+                      </div>
+                      <div class="toggle-icon">
+                        <i class="toggle-closed icon-line-chevron-down"></i>
+                        <i class="toggle-open icon-line-chevron-up"></i>
+                      </div>
+                    </div>
+                    <div class="toggle-content pl-4">
+                      1. The complete Master's program lasts 15 months, divided into 5 trimesters plus an additional month in the first trimester for propaedeutic courses. The last month is focused on your degree project since all our programs are officially revalidated by the SEP.
+                      <br>
+                      2. The program is flexible, meaning that you can advance at your own pace, but we do have a structure and order in which 3 subjects are programmed each trimester, that is to say, 1 subject per month on average. There are students who finish a subject in 1 week and there are some who take 2 months.
+                      <br>
+                      3. The Master is designed so that you can take it while you work without any problem. Each subject will take you an average of 1 hour per day (Monday to Friday).
+                    </div>
+                  </div>
+
+                  <div class="toggle faq pb-3 mb-3 faq-authors faq-marketplace">
+                    <div class="toggle-header">
+                      <div class="toggle-icon">
+                        <i class="toggle-closed icon-comments-alt"></i>
+                        <i class="toggle-open icon-comments-alt"></i>
+                      </div>
+                      <div class="toggle-title pl-1">
+                        WILL I RECEIVE A CERTIFICATE? DOES THE MASTER'S DEGREE HAVE OFFICIAL REVALIDATION?
+                      </div>
+                      <div class="toggle-icon">
+                        <i class="toggle-closed icon-line-chevron-down"></i>
+                        <i class="toggle-open icon-line-chevron-up"></i>
+                      </div>
+                    </div>
+                    <div class="toggle-content pl-4">
+                      Since this is a new program, it is in the process of revalidation with the Federal Secretariat of Public Education and the Secretariat of Public Education of the State of Puebla. We expect to have it in the next 6 months. All our programs have RVOE. All students who complete the whole program and the degree project will immediately receive a Diploma from IEXEUniversity and, 15 months after we obtain the RVOE, a Diploma from SEP.
+                    </div>
+                  </div>
+
+                  <div class="toggle faq pb-3 mb-3 faq-authors">
+                    <div class="toggle-header">
+                      <div class="toggle-icon">
+                        <i class="toggle-closed icon-lock3"></i>
+                        <i class="toggle-open icon-lock3"></i>
+                      </div>
+                      <div class="toggle-title pl-1">
+                        IS PRIOR KNOWLEDGE REQUIRED?
+                      </div>
+                      <div class="toggle-icon">
+                        <i class="toggle-closed icon-line-chevron-down"></i>
+                        <i class="toggle-open icon-line-chevron-up"></i>
+                      </div>
+                    </div>
+                    <div class="toggle-content pl-4">
+                      Students must have a basic knowledge of mathematics and statistics. However, we have two propaedeutic subjects for those candidates who do not have the necessary knowledge of programming, statistics and mathematics.
+                    </div>
+                  </div>
+
+                  <div
+                    class="toggle faq pb-3 mb-3 faq-authors faq-legal faq-authors"
+                  >
+                    <div class="toggle-header">
+                      <div class="toggle-icon">
+                        <i class="toggle-closed icon-download-alt"></i>
+                        <i class="toggle-open icon-download-alt"></i>
+                      </div>
+                      <div class="toggle-title pl-1">
+                        WHAT IS THE PROFILE OF THE STUDENTS?
+                      </div>
+                      <div class="toggle-icon">
+                        <i class="toggle-closed icon-line-chevron-down"></i>
+                        <i class="toggle-open icon-line-chevron-up"></i>
+                      </div>
+                    </div>
+                    <div class="toggle-content pl-4">
+                      The profile is very diverse, from young professionals from different industries, managers and directors of transnational companies, workers in the public sector, to recent graduates and entrepreneurs who are taking their first steps. We are looking for profiles with analytical and quantum skills that will allow them to solve the problems we will present and build real solutions. If you are looking for an official SEP Diploma, it is also necessary that you have a Bachelor's degree with official validity.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- .postcontent end -->
+          </div>
+
+          <div class="clear"></div>
+
+          <div
+            class="container mt-6 dotted-bg rounded-xxxl"
+            id="otros-programas"
+          >
+            <div class="row col-mb-50 justify-content-center mt-8">
+              <div class="container text-center">
+                <div class="heading-block center">
+                  <h3 class="color ls0">LEARN ABOUT OUR OTHER PROGRAMS</h3>
+                </div>
+              </div>
+
+              <div class="clear"></div>
+
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="card border-0 shadow-sm h-shadow shadow-ts p-3"
+                  style="
+                    background: url('../https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/mcda-logo.png')
+                      no-repeat center center / cover;
+                  "
+                >
+                  <a href="https://mcda.iexe.edu.mx/">
+                    <div class="card-body">
+                      <h6
+                        class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
+                      >
+                        .
+                      </h6>
+                      <h3 class="card-title h2 font-weight-bold mb-4">.</h3>
+                      <p class="card-text mb-5"></p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="card border-0 shadow-sm h-shadow shadow-ts p-3"
+                  style="
+                    background: url('../https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/mba-logo.png')
+                      no-repeat center center / cover;
+                  "
+                >
+                  <a href="https://mbatec.iexe.edu.mx/">
+                    <div class="card-body">
+                      <h6
+                        class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
+                      >
+                        .
+                      </h6>
+                      <h3 class="card-title h2 font-weight-bold mb-4">.</h3>
+                      <p class="card-text mb-5"></p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-md-6">
+                <div
+                  class="card border-0 shadow-sm h-shadow shadow-ts p-3"
+                  style="
+                    background: url('../https://s3.us-east-2.amazonaws.com/static.iexetec/miaa/mti-logo.png')
+                      no-repeat center center / cover;
+                  "
+                >
+                  <a href="https://mti.iexe.edu.mx/index.html">
+                    <div class="card-body">
+                      <h6
+                        class="font-weight-normal text-uppercase ls2 text-black-50 mb-2"
+                      >
+                        .
+                      </h6>
+                      <h3 class="card-title h2 font-weight-bold mb-4">.</h3>
+                      <p class="card-text mb-5"></p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- #content end -->
+
+      <!-- Footer
+		============================================= -->
+      <footer id="footer" class="bg-white border-0">
+        <div class="container">
+          <!-- Footer Widgets
+				============================================= -->
+          <div class="footer-widgets-wrap">
+            <div class="row justify-content-between">
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="widget clearfix">
+                  <div
+                    class="font-weight-semibold font-primary color ls3 h2 text-uppercase mb-4"
+                  >
+                  Master in Artificial Intelligence<span
+                      class="color-2"
+                      >.</span
+                    >
+                  </div>
+                  <div class="col">
+                    <span class="text-black-50"
+                      >&copy; 2021 All Rights Reserved to IEXE
+                      Tec</span
+                    >
+                  </div>
+
+                  <div class="col text-left">
+                    <div class="copyright-links">
+                      <a href="../#">Privacy Politic</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex justify-content-end">
+                <div class="row w-100">
+                  <div class="col-lg-4 col-6">
+                    <ul class="widget_links widget-li-noicon">
+                      <li class="mb-2 font-weight-medium">
+                        <a href="../index.html">Home</a>
+                      </li>
+                      <li class="mb-2 font-weight-medium">
+                        <a href="../#" data-href="../#Skills">Skills</a>
+                      </li>
+                      <li class="mb-2 font-weight-medium">
+                        <a href="../#" data-href="../#que-ofrecemos">What do we offer?</a>
+                      </li>
+                      <li class="mb-2 font-weight-medium">
+                        <a href="../#" data-href="../#plan-estudios">Areas of specialty</a>
+                      </li>
+                      <li class="mb-2 font-weight-medium">
+                        <a href="../#" data-href="../#plan-estudios">Academic Program</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-4 col-6">
+                    <ul class="widget_links widget-li-noicon">
+                      <li class="mb-2 font-weight-medium">
+                        <a href="../#" data-href="../#q-a">FAQ</a>
+                      </li>
+                      <li class="mb-2 font-weight-medium">
+                        <a href="../#" data-href="../#otros-programas">Other Programs</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .footer-widgets-wrap end -->
+        </div>
+
+        <!-- Copyrights
+			============================================= -->
+        <div id="copyrights" class="bg-white">
+          <div class="container">
+            <div class="row justify-content-between">
+              <div class="col">
+                <span class="text-black-50"
+                  >&copy; 2021 All rights reserved to IEXETec</span
+                >
+              </div>
+
+              <div class="col text-right">
+                <div class="copyright-links">
+                  <a href="https://www.iexe.edu.mx/images/pdf/aviso-privacidad.pdf">Privacy Politic</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- #copyrights end -->
+      </footer>
+      <!-- #footer end -->
+      <div
+        class="alert alert-primary rounded-0 fixed-bottom m-0"
+        data-animate="fadeInUp faster"
+      >
+        <div class="container">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-lg-auto">
+              Don't loose this chance of improving your professional life!
+            </div>
+            <div class="col-lg-auto mt-3 mt-lg-0">
+              <a
+                href="#modal-registro"
+                data-lightbox="inline"
+                class="btn btn-danger rounded-pill"
+                >Get your scholarship now!</a
+              >
+              <button
+                type="button"
+                class="btn btn-link float-lg-none text-white ml-md-3"
+                data-dismiss="alert"
+                aria-hidden="true"
+              >
+                <i class="icon-line-cross icon-lg"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #wrapper end -->
+
+    <!-- Go To Top
+	============================================= -->
+    <div
+      id="gotoTop"
+      class="icon-line-chevrons-up bg-color h-bg-color-2 shadow rounded-circle"
+    ></div>
+    <!-- BOTÓN WHATSAPP============================================= -->
+    <div class="rounded-circle">
+      <a
+        href="https://api.whatsapp.com/send?phone=525584274793&text=Hola,%20necesito%20información%20sobre%20el%20Máster%20en%20Ciencia%20de%20Datos%20Aplicada&source=&data="
+        class="whatsApp"
+        target="_blank"
+        ><i class="icon-whatsapp my-whatsApp"></i
+      ></a>
+    </div>
+
+    <!-- JavaScripts
+	============================================= -->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/plugins.min.js"></script>
+    <script src="../js/jquery.hotspot.js"></script>
+    <script src="../js/plan-estudios.js"></script>
+    <script src="../js/intlTelInput.js"></script>
+    <script src="../js/utils.js"></script>
+
+    <!-- Footer Scripts
+	============================================= -->
+    <script src="../js/functions.js"></script>
+
+    <script>
+      var input = document.querySelector('#telefono');
+      var iti = intlTelInput(input);
+      var number = iti.getNumber();
+      numero = number.replace('+', '');
+      window.intlTelInput(input, {
+        // any initialisation options go here
+        utilsScript: 'js/utils.js',
+        customPlaceholder: function (
+          selectedCountryPlaceholder,
+          selectedCountryData
+        ) {
+          return 'e.g. ' + selectedCountryPlaceholder;
+        },
+      });
+    </script>
+    <script>
+      var input = document.querySelector('#tel');
+      var iti = intlTelInput(input);
+      var number = iti.getNumber();
+      numero = number.replace('+', '');
+      window.intlTelInput(input, {
+        // any initialisation options go here
+        utilsScript: 'js/utils.js',
+        customPlaceholder: function (
+          selectedCountryPlaceholder,
+          selectedCountryData
+        ) {
+          return 'e.g. ' + selectedCountryPlaceholder;
+        },
+      });
+    </script>
+
+    <script>
+      jQuery(document).ready(function ($) {
+        var lastScrollTop = 0;
+        window.addEventListener('scroll', function (event) {
+          var st = $(this).scrollTop();
+          if (st > lastScrollTop) {
+            jQuery('#header.sticky-on-scrollup').removeClass(
+              'show-sticky-onscroll'
+            ); // Down Scroll
+          } else {
+            jQuery('#header.sticky-on-scrollup').addClass(
+              'show-sticky-onscroll'
+            ); // Up Scroll
+          }
+          lastScrollTop = st;
+        });
+
+        $('.services-grid .feature-box').hover(
+          function () {
+            $(this).addClass('dark');
+          },
+          function () {
+            $(this).removeClass('dark');
+          }
+        );
+      });
+    </script>
+    <script>
+      (function () {
+        var support = {transitions: Modernizr.csstransitions},
+          // transition end event name
+          transEndEventNames = {
+            WebkitTransition: 'webkitTransitionEnd',
+            MozTransition: 'transitionend',
+            OTransition: 'oTransitionEnd',
+            msTransition: 'MSTransitionEnd',
+            transition: 'transitionend',
+          },
+          transEndEventName =
+            transEndEventNames[Modernizr.prefixed('transition')],
+          onEndTransition = function (el, callback) {
+            var onEndCallbackFn = function (ev) {
+              if (support.transitions) {
+                if (ev.target != this) return;
+                this.removeEventListener(transEndEventName, onEndCallbackFn);
+              }
+              if (callback && typeof callback === 'function') {
+                callback.call(this);
+              }
+            };
+            if (support.transitions) {
+              el.addEventListener(transEndEventName, onEndCallbackFn);
+            } else {
+              onEndCallbackFn();
+            }
+          };
+
+        $('.grid-container').one('layoutComplete', function () {
+          new GridFx(document.querySelector('.grid'), {
+            imgPosition: {
+              x: -0.5,
+              y: 1,
+            },
+            onOpenItem: function (instance, item) {
+              instance.items.forEach(function (el) {
+                if (item != el) {
+                  var delay = Math.floor(Math.random() * 50);
+                  el.style.WebkitTransition =
+                    'opacity .5s ' +
+                    delay +
+                    'ms cubic-bezier(.7,0,.3,1), -webkit-transform .5s ' +
+                    delay +
+                    'ms cubic-bezier(.7,0,.3,1)';
+                  el.style.transition =
+                    'opacity .5s ' +
+                    delay +
+                    'ms cubic-bezier(.7,0,.3,1), transform .5s ' +
+                    delay +
+                    'ms cubic-bezier(.7,0,.3,1)';
+                  el.style.WebkitTransform = 'scale3d(0.1,0.1,1)';
+                  el.style.transform = 'scale3d(0.1,0.1,1)';
+                  el.style.opacity = 0;
+                }
+              });
+            },
+            onCloseItem: function (instance, item) {
+              instance.items.forEach(function (el) {
+                if (item != el) {
+                  el.style.WebkitTransition =
+                    'opacity .4s, -webkit-transform .4s';
+                  el.style.transition = 'opacity .4s, transform .4s';
+                  el.style.WebkitTransform = 'scale3d(1,1,1)';
+                  el.style.transform = 'scale3d(1,1,1)';
+                  el.style.opacity = 1;
+
+                  onEndTransition(el, function () {
+                    el.style.transition = 'none';
+                    el.style.WebkitTransform = 'none';
+                  });
+                }
+              });
+            },
+          });
+        });
+      })();
+    </script>
+
+    <!--FORMULARIOS DE REGISTRO DE LEADS-->
+    <script>
+      $('#requestACall').submit(function () {
+        submit_form($('#requestACall'));
+        document.getElementById('requestACall').reset();
+        return false;
+      });
+      $('#requestBCall').submit(function () {
+        submit_form($('#requestBCall'));
+        document.getElementById('requestBCall').reset();
+        return false;
+      });
+      $('#requestCCall').submit(function () {
+        submit_form($('#requestCCall'));
+        document.getElementById('requestCCall').reset();
+        return false;
+      });
+
+      function submit_form(form) {
+        // Aquí puedes meter validaciones de campos
+        var countryData = iti.getSelectedCountryData();
+        var pais = countryData['iso2'];
+        var extra_params =
+          '&adicional=pais:%20' +
+          pais +
+          '&programa=MCDA' +
+          '&referencia=https://mcda.iexe.edu.mx/' +
+          '&charifaz=' +
+          get_browser();
+        var request_data = form.serialize() + extra_params;
+        console.log('request_data' + request_data);
+        $.ajax({
+          type: 'POST',
+          url: 'https://api.redisoft.dev/Leads/web',
+          data: request_data,
+          beforeSend: function () {
+            // Acciones antes de lanzar la solicitud
+            $('#submit').attr('disabled', 'disabled');
+            $('.modal-body').css('opacity', '.5');
+          },
+          success: function (data) {
+            console.log(data);
+            if (data == 'true') {
+              $('#inputName').val('');
+              $('#inputEmail').val('');
+              $('#tel').val('');
+              $('.statusMsg').html(
+                '<span style="color:#17938F;font-weight: 700;font-size: 18px;">¡Gracias por enviar tus datos!</span>',
+              );
+            } else {
+              $('.statusMsg').html(
+                '<span style="color:#DB1F2D;font-weight: 700;font-size: 18px;">Hubo un problema, porfavor intenta de nuevo</span>',
+              );
+            }
+            $('.submit').removeAttr('disabled');
+            $('.modal-body').css('opacity', '');
+          }
+        });
+      }
+
+      function get_browser() {
+        var nVer = navigator.appVersion;
+        var nAgt = navigator.userAgent;
+        var browserName = navigator.appName;
+        var fullVersion = '' + parseFloat(navigator.appVersion);
+        var nameOffset, verOffset, ix;
+
+        // In Opera, the true version is after "Opera" or after "Version"
+        if ((verOffset = nAgt.indexOf('Opera')) != -1) {
+          browserName = 'Opera';
+          fullVersion = nAgt.substring(verOffset + 6);
+          if ((verOffset = nAgt.indexOf('Version')) != -1)
+            fullVersion = nAgt.substring(verOffset + 8);
+        }
+        // In MSIE, the true version is after "MSIE" in userAgent
+        else if ((verOffset = nAgt.indexOf('MSIE')) != -1) {
+          browserName = 'Microsoft Internet Explorer';
+          fullVersion = nAgt.substring(verOffset + 5);
+        }
+        // In Chrome, the true version is after "Chrome"
+        else if ((verOffset = nAgt.indexOf('Chrome')) != -1) {
+          browserName = 'Chrome';
+          fullVersion = nAgt.substring(verOffset + 7);
+        }
+        // In Safari, the true version is after "Safari" or after "Version"
+        else if ((verOffset = nAgt.indexOf('Safari')) != -1) {
+          browserName = 'Safari';
+          fullVersion = nAgt.substring(verOffset + 7);
+          if ((verOffset = nAgt.indexOf('Version')) != -1)
+            fullVersion = nAgt.substring(verOffset + 8);
+        }
+        // In Firefox, the true version is after "Firefox"
+        else if ((verOffset = nAgt.indexOf('Firefox')) != -1) {
+          browserName = 'Firefox';
+          fullVersion = nAgt.substring(verOffset + 8);
+        }
+        // In most other browsers, "name/version" is at the end of userAgent
+        else if (
+          (nameOffset = nAgt.lastIndexOf(' ') + 1) <
+          (verOffset = nAgt.lastIndexOf('/'))
+        ) {
+          browserName = nAgt.substring(nameOffset, verOffset);
+          fullVersion = nAgt.substring(verOffset + 1);
+          if (browserName.toLowerCase() == browserName.toUpperCase()) {
+            browserName = navigator.appName;
+          }
+        }
+        // trim the fullVersion string at semicolon/space if present
+        if ((ix = fullVersion.indexOf(';')) != -1)
+          fullVersion = fullVersion.substring(0, ix);
+        if ((ix = fullVersion.indexOf(' ')) != -1)
+          fullVersion = fullVersion.substring(0, ix);
+
+        majorVersion = parseInt('' + fullVersion, 10);
+        if (isNaN(majorVersion)) {
+          fullVersion = '' + parseFloat(navigator.appVersion);
+        }
+        return browserName + ' ' + fullVersion;
+      }
+    </script>
+  </body>
+</html>
